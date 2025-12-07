@@ -9,7 +9,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background-color: #f6f7fb;
-      color: #333; /* Màu chữ mặc định */
+      color: #243B9A; /* Màu chữ mặc định */
     }
     a { text-decoration: none; }
     /* 🌈 NỀN TOÀN TRANG */
@@ -37,7 +37,7 @@
       color: #222;
       transition: color 0.3s;
     }
-    nav a:hover { color: #0077ff; }
+    nav a:hover { color: #243B9A; }
     /* BANNER */
     .banner {
       display: flex;
@@ -50,9 +50,9 @@
       color: #333;
     }
     .banner-left { width: 45%; }
-    .banner-left h1 { font-size: 60px; color: #1a1a1a; }
+    .banner-left h1 { font-size: 60px; color: #243B9A; }
     .banner-left p { font-size: 20px; color: #555; margin-top: 15px; }
-    .readmore { font-size: 18px; font-weight: bold; color: #0077ff; margin-top: 20px; display: inline-block; }
+    .readmore { font-size: 18px; font-weight: bold; color: #243B9A; margin-top: 20px; display: inline-block; }
 
     .banner-right img { width: 350px; }
     /* CONTENT GRID */
@@ -77,7 +77,7 @@
       border-radius: 25px;
       border: none;
       background: #fff;
-      color: #0077ff;
+      color: #243B9A;
       cursor: pointer;
       transition: all 0.3s;
     }
@@ -120,9 +120,6 @@
       margin-bottom: 20px;
       color: #333;
     }
-    .cryo { border-left: 6px solid #6c7dd2; color: #334074; }
-    .sumeru { border-left: 6px solid #4a9e88; color: #2d6a59; }
-    .akademiya { border-left: 6px solid #2e7d7b; color: #1f5654; }
     .card-title { margin: 0; font-size: 18px; font-weight: 600; color: inherit; }
     .card-description { margin-top: 5px; font-size: 14px; line-height: 1.4; color: inherit; opacity: 0.85; }
   </style>
@@ -164,7 +161,7 @@
     <div class="banner-left">
       <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
       <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
-      <a class="readmore" href="#">◄ Quay lại trang chủ</a>
+      <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="banner-right">
       <img src="lung linh.png" alt="Hình banner">
@@ -240,6 +237,94 @@
         </div>
       </div>
     </div>
+    <style>
+.container {
+    width: 90%;
+    max-width: 800px;
+}
+/* --- Phần Đầu: INFORMATION  --- */
+.info-header h1 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+}
+.input-field {
+    /* Đổi màu nền, bỏ đổ bóng để giống ô input  */
+    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng mờ */
+    border-radius: 8px; /* Bo tròn ít hơn */
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 16px;
+    box-shadow: none; /* Bỏ đổ bóng */
+    display: flex;
+    align-items: center;
+}
+.icon-q {
+    margin-right: 10px;
+    color: #6a6a6a; /* Màu icon tìm kiếm */
+    font-size: 14px;
+}
+/* --- Phần Thẻ Nội Dung --- */
+.cards-section {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 30px;
+}
+.info-card.style-2 {
+    display: flex;
+    align-items: center;
+    /* Toàn bộ thẻ có nền trắng và bo tròn */
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ hơn */
+    padding: 10px;
+    /* Dùng Flexbox để căn chỉnh nội dung và icon */
+    justify-content: space-between;
+}
+/* Khu vực Biểu tượng/Icon bên trái */
+.card-image-wrapper.style-2 {
+    /* Thiết lập lại kích thước cho Biểu tượng */
+    width: 60px; 
+    height: 60px;
+    border-radius: 8px; /* Bo tròn ít hơn */
+    margin-right: 15px;
+    overflow: visible; /* Cho phép biểu tượng tràn ra nếu cần */
+    background: none; /* Bỏ màu nền cho icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+/* Phần nội dung bên phải (Màu chữ và tiêu đề) */
+.card-content.style-2 {
+    flex-grow: 1;
+    padding: 5px 0;
+}
+.card-content.style-2 h3 {
+    margin: 0 0 3px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Màu tiêu đề đen */
+    border-bottom: none; /* Bỏ gạch chân */
+    padding-bottom: 0;
+}
+.card-content.style-2 p {
+    margin: 3px 0 0 0;
+    font-size: 13px;
+    color: #555;
+}
+.card-content.style-2 .quote {
+    font-style: italic;
+    font-size: 12px;
+    color: #777;
+}
+/* Nút X (Đóng) - Dấu X trên các thẻ chibi ở Hình 1 đã bị loại bỏ trong style này */
+.close-button {
+    display: none; 
+}
+    </style>
   </section>
 </body>
 </html>
