@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,27 @@
     <!-- Nền phía sau toàn trang -->
     <div class="background"></div>
     <header>
-        <div class="logo">⭐</div>
+        <style>
+  .avatar {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #bcdcff;
+      margin-bottom: 10px;
+   }
+   full-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .full-center img {
+    width: 250px;
+  }
+</style>
+<div class="card">
+        <img src="duyen.png" class="avatar">
         <nav>
             <a href="#">Home</a>
             <a href="#">Search</a>
@@ -24,12 +43,12 @@
     <!-- Banner -->
     <section class="banner">
         <div class="banner-left">
-            <h1>Layla</h1>
-            <p>She is a student in the Rtawahist Darshan, specializing in Theoretical Astrology.</p>
+            <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
+            <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
             <a class="readmore" href="#">Read More</a>
         </div>
         <div class="banner-right">
-            <img src="layla.png" alt="">
+            <img src="lung linh.png" alt="">
         </div>
     </section>
     <!-- Artwork + Recent -->
@@ -73,7 +92,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("nen.jpg"); /* → CHÈN HÌNH NỀN Ở ĐÂY */
+    background-image: url("pd.png"); /* → CHÈN HÌNH NỀN Ở ĐÂY */
     background-size: cover;
     background-position: center;
     opacity: 0.3;
