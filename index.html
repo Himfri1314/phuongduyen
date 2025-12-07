@@ -74,17 +74,99 @@
         </div>
     </div>
     <!-- SỞ THÍCH + NHẠC -->
-    <div>
-        <div class="card info-card">
-            <img src="fri1.jpg" class="icon" alt="icon">
-            <h3>Sở thích</h3>
-            <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
+    <style>
+        /* CSS để tạo kiểu cho các thẻ thông tin */
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0; /* Màu nền nhẹ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Khoảng cách giữa hai thẻ */
+            padding: 20px;
+        }
+        .info-card {
+            width: 300px; /* Chiều rộng cố định của thẻ */
+            background-color: #ffffff; /* Màu nền trắng cho thẻ */
+            border-radius: 10px; /* Bo góc mềm mại */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ nhẹ */
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .card-header {
+            display: flex;
+            align-items: flex-start; /* Căn trên cùng */
+            gap: 15px;
+        }
+        .image-placeholder {
+            /* Vùng chứa cho hình ảnh chibi */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* Hình tròn */
+            background-color: #e0e0e0; /* Màu nền cho placeholder */
+            /* Để tạo hiệu ứng giống hình ảnh có viền vàng */
+            border: 2px solid #f9e79f; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            color: #888;
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+        .card-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .card-text {
+            font-size: 0.95em;
+            color: #555;
+            margin: 0;
+            line-height: 1.4;
+        }
+        /* Chỉ định màu sắc và font-weight cho các tiêu đề lớn */
+        .card-title-main {
+             font-size: 1.4em;
+             font-weight: bold;
+             color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-card">
+        <div class="card-header">
+            <img src="fri1.jpg" class="icon" alt="icon"> 
+            <div class="card-content">
+                <p class="card-title-main">Sở thích</p>
+            </div>
         </div>
-        <div class="card info-card">
-            <img src="fri2.jpg" class="icon" alt="icon">
-            <h3>Nhạc</h3>
-            <p>Nắng Ấm Trong Tim - Duongg<br>
-            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
+        <div class="card-text-section">
+            <p class="card-text">
+                *Vẽ vời* - "Art is the lie that enables us to realize the truth."
+            </p>
+        </div>
+    </div>
+    <div class="info-card">
+        <div class="card-header">
+             <img src="fri2.jpg" class="icon" alt="icon"> 
+            <div class="card-content">
+                <p class="card-title-main">Nhạc</p>
+            </div>
+        </div>
+        <div class="card-text-section">
+            <p class="card-text">
+                *Nắng Ấm Trong Tim* - Duongg
+            </p>
+            <p class="card-text">
+                "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"
+            </p>
         </div>
     </div>
 </section>
@@ -94,7 +176,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("pd1.png");
+    background-image: url("PD.png");
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -218,4 +300,5 @@ nav a {
 </style>
 </body>
 </html>
+
 
