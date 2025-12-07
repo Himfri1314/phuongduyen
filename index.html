@@ -9,37 +9,80 @@
     <!-- Nền phía sau toàn trang -->
     <div class="background"></div>
     <header>
-        <style>
-  .avatar {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #bcdcff;
-      margin-bottom: 10px;
-   }
-   .full-center {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .full-center img {
-    width: 250px;
-  }
-</style>
 <div class="card">
         <img src="duyen.png" class="avatar">
+    <div class="left-icons">
+            <div class="icon-box">☰</div>
+            <div class="icon-box">＋</div>
+        </div>
         <nav>
             <a href="#">Home</a>
             <a href="#">Search</a>
             <a href="#">Message</a>
         </nav>
-        <div class="buttons">
+        <div class="right-buttons">
             <button class="login">Log in</button>
             <button class="signup">Sign up</button>
         </div>
     </header>
+<style>
+/* Avatar */
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #bcdcff;
+    margin-right: 20px;
+}
+/* Header tổng */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+/* Gom avatar + nav thành 1 hàng ngang */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+/* NAV */
+nav a {
+    margin: 0 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+}
+nav a:hover {
+    color: #6e62d4;
+}
+/* Buttons */
+.buttons button {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login { background: #e7e7e7; }
+.signup { background: #6e62d4; color: white; }
+/* Nền */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("pd.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+</style>
     <!-- Banner -->
     <section class="banner">
         <div class="banner-left">
@@ -217,3 +260,4 @@ nav a {
     margin: 0;
 }
     </style>
+
