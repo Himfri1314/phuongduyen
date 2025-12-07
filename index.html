@@ -46,10 +46,18 @@
         <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="card-wrapper">
-    <div class="big-card">
         <img src="lung linh.png" class="big-image">
     </div>
-</div>
+    </div>
+        <style>
+            width: 150px;
+            height: auto;
+            position: absolute
+            top: -20px;
+            left: -30px;
+            width: 350px;
+            object-fit: cover;
+        </style>
 </section>
 <!-- 🎨 CONTENT -->
 <section class="content">
@@ -95,19 +103,74 @@
         </div>
     </div>
     <!-- SỞ THÍCH + NHẠC -->
-    <div>
-        <div class="card info-card">
-            <img src="fri1.jpg" class="icon" alt="icon">
+        <style>
+        /* CSS cho toàn bộ cấu trúc */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        /* Khung chứa chung (Card) */
+        .card {
+            display: flex; /* Kích hoạt Flexbox */
+            align-items: flex-start; /* Căn chỉnh nội dung theo chiều dọc từ trên xuống */
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Khung 1: Chứa hình ảnh (Avatar) */
+        .avatar-frame {
+            /* Đặt kích thước cố định cho khung avatar và thêm khoảng cách */
+            width: 60px; 
+            margin-right: 15px; /* Tạo khoảng cách giữa avatar và nội dung */
+            flex-shrink: 0; /* Ngăn avatar bị co lại khi nội dung quá dài */
+        }
+        .avatar-frame img {
+            width: 100%; /* Hình ảnh chiếm toàn bộ khung avatar */
+            height: auto;
+            border-radius: 50%; /* Làm hình ảnh tròn (tùy chọn) */
+            display: block;
+        }
+        /* Khung 2: Chứa chữ (Nội dung) */
+        .content-frame {
+            /* Cho phép khung nội dung chiếm hết không gian còn lại */
+            flex-grow: 1; 
+            padding-top: 5px; /* Điều chỉnh để căn chỉnh với hình ảnh */
+        }
+        .content-frame h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .content-frame p {
+            margin-top: 0;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar-frame">
+            <img src="fri1.jpg" alt="Avatar Sở Thích">
+        </div>
+        <div class="content-frame">
             <h3>SỞ THÍCH</h3>
             <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
         </div>
-        <div class="card info-card">
-            <img src="fri2.jpg" class="icon" alt="icon">
+    </div>
+    <div class="card">
+        <div class="avatar-frame">
+            <img src="fri2.jpg" alt="Avatar Nhạc">
+        </div>
+        <div class="content-frame">
             <h3>NHẠC</h3>
-            <p>Nắng Ấm Trong Tim - Duongg<br>
-            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
+            <p>Nắng Ấm Trong Tim - Duongg<br>"Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
         </div>
     </div>
+</body>
 </section>
 <style>
 /* 🌈 NỀN TOÀN TRANG */
@@ -269,25 +332,6 @@ nav a {
 /* Màu 4 (Xám đen) */
 .search-item.black {
     background: #2f2f2f;
-}
-.card-wrapper {
-    padding: 40px;
-}
-.big-card {
-    width: 620px;
-    height: 300px;
-    background: #eaeaff;
-    border-radius: 32px;
-    overflow: hidden;
-    position: relative;
-}
-.big-image {
-    position: absolute;
-    right: -60px;
-    top: 0;
-    height: 110%;
-    object-fit: cover;
-    transform: scale(1.15);
 }
 </style>
 </body>
