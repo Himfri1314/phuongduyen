@@ -111,15 +111,15 @@
         </div>
     </div>
     <style>
-        .art-list {
+.art-list {
     display: flex;
     gap: 20px;
 }
 .art-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 20px;
+    width: 150px;        /* chiều ngang */
+    height: 150px;       /* chiều cao (bằng width → hình vuông) */
+    object-fit: cover;   /* cắt ảnh cho đẹp, không méo */
+    border-radius: 20px; /* bo nhẹ góc */
 }
 .viewmore {
     margin-top: 10px;
@@ -128,6 +128,39 @@
     border: none;
     background: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* 1. Thiết lập Flexbox cho phần tử bao ngoài */
+.info-item {
+    display: flex; /* Bật chế độ Flexbox để xếp các mục theo hàng ngang */
+    align-items: flex-start; /* Căn chỉnh các mục theo cạnh trên */
+    margin-bottom: 30px; /* Tạo khoảng cách giữa phần Sở thích và phần Nhạc */
+}
+/* 2. Thiết lập kích thước và lề cho Khung Icon */
+.icon-frame {
+    /* Đảm bảo icon có kích thước cố định và không bị biến dạng */
+    width: 100px; /* Chiều rộng khung icon */
+    height: 100px; /* Chiều cao khung icon */
+    margin-right: 20px; /* Khoảng cách giữa icon và khung chữ */
+    flex-shrink: 0; /* Ngăn icon bị co lại nếu không gian hẹp */
+}
+.icon-frame img {
+    /* Điều chỉnh hình ảnh để vừa với khung (tuỳ thuộc cách bạn làm icon) */
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; /* Giữ tỷ lệ hình ảnh */
+}
+/* 3. Thiết lập kích thước cho Khung Chữ */
+.content-card {
+    flex-grow: 1; /* Cho phép khung chữ mở rộng để chiếm hết không gian còn lại */
+    /* Định dạng chung của card */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* 4. Định dạng chung của thẻ H3 trong card */
+.content-card h3 {
+    margin-top: 0;
 }
  </style>
 </section>
@@ -248,5 +281,6 @@ nav a {
 </style>
 </body>
 </html>
+
 
 
