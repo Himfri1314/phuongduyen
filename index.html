@@ -1,16 +1,148 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhuongDuyen</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhuongDuyen</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== GLOBAL ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f6f7fb;
+      color: #333;
+    }
+
+    /* 🌈 NỀN TOÀN TRANG */
+    .background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: url("PD.png");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+    nav a {
+      margin: 0 20px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #333;
+    }
+    /* BANNER */
+    .banner {
+      margin: 40px auto;
+      width: 90%;
+      background: white;
+      border-radius: 30px;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .banner-left { width: 45%; }
+    .banner-left h1 { font-size: 60px; margin: 0; }
+    .banner-left p { font-size: 20px; margin-top: 15px; }
+    .readmore {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #444;
+      font-weight: bold;
+    }
+    .banner-right img { width: 350px; }
+    /* CONTENT */
+    .content {
+      width: 90%;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 40px;
+    }
+    /* ARTWORK */
+    .art-list {
+      display: flex;
+      gap: 20px;
+    }
+    .art-card img {
+      width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .viewmore {
+      margin-top: 10px;
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: none;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    /* INFORMATION BOXES */
+    .search-item {
+      padding: 12px 20px;
+      margin-top: 10px;
+      background: #e8effa;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .icon-search { width: 18px; margin-right: 10px; }
+    /* INFO CARDS */
+    .info-card {
+      width: 260px;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .cryo { border-left: 6px solid #6c7dd2; color: #334074; }
+    .sumeru { border-left: 6px solid #4a9e88; color: #2d6a59; }
+    .akademiya { border-left: 6px solid #2e7d7b; color: #1f5654; }
+
+    /* CHARACTER PANEL */
+    .container { display: flex; gap: 20px; padding: 20px; }
+    .left-panel { display: flex; flex-direction: column; gap: 15px; }
+    .character-card {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .character-img { width: 100%; height: 100%; object-fit: contain; }
+    .close-btn {
+      position: absolute;
+      top: 8px; left: 8px;
+      background-color: rgba(255,255,255,0.55);
+      border: none; border-radius: 50%;
+      width: 25px; height: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+    .right-panel { display: flex; flex-direction: column; gap: 15px; }
+    .card-title { margin: 0; font-size: 18px; font-weight: 600; }
+    .card-description { margin-top: 5px; font-size: 14px; line-height: 1.4; opacity: 0.85; }
+  </style>
 </head>
 <body>
-<!-- 🌈 NỀN TOÀN TRANG -->
-<div class="background"></div>
-<!-- 🔹 AVATAR + MENU -->
-<header>
-    <style>
+  <div class="background"></div>
+  <header>
+      <style>
   .avatar {
       width: 120px;
       height: 120px;
@@ -30,328 +162,75 @@
   }
 </style>
     <div class="card avatar-box">
-        <img src="duyen.png" class="avatar">
+      <img src="duyen.png" class="avatar">
     </div>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Search</a>
-        <a href="#">Message</a>
+      <a href="#">Home</a>
+      <a href="#">Search</a>
+      <a href="#">Message</a>
     </nav>
-</header>
-<!-- 🌟 BANNER -->
-<section class="banner">
+  </header>
+  <section class="banner">
     <div class="banner-left">
-        <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
-        <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
-        <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
+      <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
+      <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
+      <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="banner-right">
-        <img src="lung linh.png" alt="">
+      <img src="lung linh.png" alt="">
     </div>
-</section>
-<!-- 🎨 CONTENT -->
-<section class="content"
-  <!-- ARTWORK -->
+  </section>
+  <section class="content">
+    <!-- ARTWORK -->
     <div class="artwork">
-        <h2>ARTWORK</h2>
-        <div class="art-list">
-            <div class="art-card"><img src="art1.jpg"></div>
-            <div class="art-card"><img src="art2.jpg"></div>
-        </div>
-        <button class="viewmore">View More</button>
+      <h2>ARTWORK</h2>
+      <div class="art-list">
+        <div class="art-card"><img src="art1.jpg" alt=""></div>
+        <div class="art-card"><img src="art2.jpg" alt=""></div>
+      </div>
+      <button class="viewmore">View More</button>
     </div>
     <!-- INFORMATION -->
     <div class="recent">
-        <h2>INFORMATION</h2>
-        <div class="search-item">
-            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
-            </svg>
-            Ngày sinh: 04/12/2008
-        </div>
-        <div class="search-item">
-            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
-            </svg>
-            Cung hoàng đạo: Nhân Mã
-        </div>
-        <div class="search-item">
-            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
-            </svg>
-            Email: duyen041208@gmail.com
-        </div>
-        <div class="search-item black">
-            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
-            </svg>
-            SĐT: 0972591449
-        </div>
-    <div class="container">
+      <h2>INFORMATION</h2>
+      <div class="search-item">
+        <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+          <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+          <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+        </svg>
+        Ngày sinh: 04/12/2008
+      </div>
+      <div class="search-item">Cung hoàng đạo: Nhân Mã</div>
+      <div class="search-item">Email: duyen041208@gmail.com</div>
+      <div class="search-item black">SĐT: 0972591449</div>
+      <div class="container">
         <div class="left-panel">
-            <div class="character-card">
-                <button class="close-btn">X</button>
-                <img src="fri1.jpg" alt="Nhân vật 1" class="character-img">
-            </div>
-            <div class="character-card">
-                <button class="close-btn">X</button>
-                <img src="fri2.jpg" alt="Nhân vật 2" class="character-img">
-            </div>
+          <div class="character-card">
+            <button class="close-btn">X</button>
+            <img src="fri1.jpg" alt="Nhân vật 1" class="character-img">
+          </div>
+          <div class="character-card">
+            <button class="close-btn">X</button>
+            <img src="fri2.jpg" alt="Nhân vật 2" class="character-img">
+          </div>
         </div>
         <div class="right-panel">
-            <div class="info-card cryo">
-                <div class="icon-text-group">
-                    <h2 class="card-title">SỞ THÍCH</h2>
-                </div>
-                <p class="card-description">Vẽ vời - “Art is the lie that enables us to realize the truth.”</span></p>
-            </div>
-            <div class="info-card sumeru">
-                <div class="icon-text-group">
-                    <h2 class="card-title">NHẠC</h2>
-                </div>
-                <p class="card-description">Nắng Ấm Trong Tim - Duongg<br>
-            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</span></p>
-            </div>
-            <div class="info-card akademiya">
-                <div class="icon-text-group">
-                    <h2 class="card-title">TÍNH CÁCH</h2>
-                </div>
-                <p class="card-description">Năng động, sáng tạo, lạc quan</span></p>
-            </div>
+          <div class="info-card cryo">
+            <h2 class="card-title">SỞ THÍCH</h2>
+            <p class="card-description">Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
+          </div>
+          <div class="info-card sumeru">
+            <h2 class="card-title">NHẠC</h2>
+            <p class="card-description">Nắng Ấm Trong Tim - Duongg<br>
+              "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
+          </div>
+          <div class="info-card akademiya">
+            <h2 class="card-title">TÍNH CÁCH</h2>
+            <p class="card-description">Năng động, sáng tạo, lạc quan</p>
+          </div>
         </div>
+      </div>
     </div>
-        <style>
-/* ===== GLOBAL ===== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    color: #333;
-}
-.container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-/* ===== LEFT PANEL ===== */
-.left-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.character-card {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background-color: #3b3a6e;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-}
-.character-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.close-btn {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background-color: rgba(255, 255, 255, 0.55);
-    border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-/* ===== RIGHT PANEL ===== */
-.right-panel {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.info-card {
-    width: 300px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-/* ===== CARD THEMES + TEXT COLORS ===== */
-/* Cryo */
-.cryo {
-    border-left: 6px solid #6c7dd2;
-    color: #334074; /* màu chữ tông lạnh */
-}
-/* Sumeru */
-.sumeru {
-    border-left: 6px solid #4a9e88;
-    color: #2d6a59; /* xanh thiên nhiên */
-}
-/* Akademiya */
-.akademiya {
-    border-left: 6px solid #2e7d7b;
-    color: #1f5654; /* đậm hơn, tông học thuật */
-}
-/* ===== INSIDE CARD CONTENT ===== */
-.icon-text-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.info-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-.card-title {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-.card-description {
-    margin: 5px 0 0 0;
-    font-size: 14px;
-    line-height: 1.4;
-    opacity: 0.85;
-}
-.bold {
-    font-weight: bold;
-}
-</style>
-</section>
-<style>
-/* 🌈 NỀN TOÀN TRANG */
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("PD.png");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
-}
-/* BODY */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f6f7fb;
-}
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-}
-nav a {
-    margin: 0 20px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-}
-/* BANNER */
-.banner {
-    margin: 40px auto;
-    width: 90%;
-    background: white;
-    border-radius: 30px;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-.banner-left { width: 45%; }
-.banner-left h1 {
-    font-size: 60px;
-    margin: 0;
-}
-.banner-left p {
-    font-size: 20px;
-    margin-top: 15px;
-}
-.readmore {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #444;
-    font-weight: bold;
-}
-.banner-right img {
-    width: 350px;
-}
-/* CONTENT GRID */
-.content {
-    width: 90%;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 40px;
-}
-/* ARTWORK */
-.art-list {
-    display: flex;
-    gap: 20px;
-}
-.art-card img {
-    width: 140px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.viewmore {
-    margin-top: 10px;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* INFORMATION BOXES */
-.search-item {
-    padding: 12px 20px;
-    margin-top: 10px;
-    background: #e8effa;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-}
-.icon-search {
-    width: 18px;
-    margin-right: 10px;
-}
-/* INFO CARDS */
-.info-card {
-    width: 260px;
-    padding: 20px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-.icon {
-    width: 60px;
-    height: 60px;
-}
-</style>
+  </section>
 </body>
 </html>
