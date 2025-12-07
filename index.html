@@ -333,93 +333,207 @@
     </div>
     <style>
 <style>
-       .container {
-    width: 90%;
-    max-width: 800px;
+       /* --- NỀN MỜ PHÍA SAU --- */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("background.jpg"); /* ← Thay ảnh nền ở đây */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    z-index: -1;
 }
-/* --- Phần Đầu: INFORMATION  --- */
-.info-header h1 {
-    font-size: 28px;
-    color: #444;
-    margin-bottom: 20px;
+
+/* Reset */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
 }
-.input-field {
-    /* Đổi màu nền, bỏ đổ bóng để giống ô input  */
-    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng mờ */
-    border-radius: 8px; /* Bo tròn ít hơn */
-    padding: 10px 15px;
-    margin-bottom: 15px;
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.left-icons .icon-box {
+    background: #e9e9f3;
+    padding: 12px;
+    border-radius: 12px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
     color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.right-buttons button {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
     font-size: 16px;
-    box-shadow: none; /* Bỏ đổ bóng */
+}
+
+.login { background: #ececf3; }
+.signup { background: #6f6bcf; color: white; }
+
+/* Banner */
+.banner {
+    width: 90%;
+    margin: auto;
+    background: #dce5ff;
+    border-radius: 30px;
     display: flex;
     align-items: center;
+    padding: 20px;
+    position: relative;
 }
-.icon-q {
-    margin-right: 10px;
-    color: #6a6a6a; /* Màu icon tìm kiếm */
-    font-size: 14px;
+
+.arrow {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    color: #6f6bcf;
 }
-/* --- Phần Thẻ Nội Dung --- */
-.cards-section {
+
+.arrow.left { margin-right: 20px; }
+.arrow.right { margin-left: 20px; }
+
+.banner-content {
     display: flex;
-    flex-direction: column; 
-    gap: 15px; 
+    justify-content: space-between;
+    width: 100%;
+}
+
+.banner-left {
+    width: 45%;
+    padding: 20px;
+}
+
+.banner-left h1 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.banner-left p {
+    font-size: 18px;
+    margin: 10px 0 20px;
+}
+
+.readmore {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+.banner-right img {
+    width: 390px;
+    height: auto;
+}
+
+/* Dots */
+.dots {
     margin-top: 30px;
 }
-.info-card.style-2 {
+
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    background: #c4c4c4;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.dot.active {
+    background: #6f6bcf;
+}
+
+/* Grid layout */
+.grid {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+}
+
+/* Artwork */
+.art-row {
     display: flex;
-    align-items: center;
-    /* Toàn bộ thẻ có nền trắng và bo tròn */
-    background-color: white; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ hơn */
-    padding: 10px;
-    /* Dùng Flexbox để căn chỉnh nội dung và icon */
-    justify-content: space-between;
+    gap: 20px;
 }
-/* Khu vực Biểu tượng/Icon bên trái */
-.card-image-wrapper.style-2 {
-    /* Thiết lập lại kích thước cho Biểu tượng */
-    width: 60px; 
-    height: 60px;
-    border-radius: 8px; /* Bo tròn ít hơn */
-    margin-right: 15px;
-    overflow: visible; /* Cho phép biểu tượng tràn ra nếu cần */
-    background: none; /* Bỏ màu nền cho icon */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+
+.art-card img {
+    width: 150px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 }
-/* Phần nội dung bên phải (Màu chữ và tiêu đề) */
-.card-content.style-2 {
-    flex-grow: 1;
-    padding: 5px 0;
-}
-.card-content.style-2 h3 {
-    margin: 0 0 3px 0;
+
+.viewmore {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: white;
+    border-radius: 25px;
+    border: none;
     font-size: 16px;
-    font-weight: bold;
-    color: #333; /* Màu tiêu đề đen */
-    border-bottom: none; /* Bỏ gạch chân */
-    padding-bottom: 0;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
 }
-.card-content.style-2 p {
-    margin: 3px 0 0 0;
-    font-size: 13px;
+
+/* Recent Search */
+.search-box input {
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 15px;
+    border: none;
+    background: #f1f1f9;
+}
+
+.search-item {
+    background: #eef2ff;
+    padding: 12px 20px;
+    margin-top: 12px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.search-item.black { background: #2d2d2d; color: white; }
+.search-item.white { background: white; }
+
+/* Info Cards */
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.12);
+}
+
+.info-card h3 {
+    margin: 10px 0 5px;
+}
+
+.info-card p {
     color: #555;
 }
-.card-content.style-2 .quote {
-    font-style: italic;
-    font-size: 12px;
-    color: #777;
-}
-/* Nút X (Đóng) - Dấu X trên các thẻ chibi ở Hình 1 đã bị loại bỏ trong style này */
-.close-button {
-    display: none; 
+
+.info-icon {
+    width: 40px;
 }
     </style>
   </section>
 </body>
 </html>
+
