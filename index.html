@@ -203,4 +203,17 @@ nav a {
     margin-bottom: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+    .container {
+    display: grid; /* Kích hoạt Grid */
+    grid-template-columns: auto 1fr; /* Cột đầu tiên tự động điều chỉnh theo ảnh, cột thứ hai chiếm phần còn lại */
+    align-items: center; /* Căn chỉnh các mục theo chiều dọc (giữa) */
+    gap: 20px; /* Thêm khoảng cách giữa hình ảnh và chữ (tùy chọn) */
+}
+.text-content {
+    display: flex; /* Sử dụng Flexbox bên trong để căn các chữ nằm ngang */
+    gap: 15px; /* Khoảng cách giữa các chữ */
+}
+.text-content p {
+    margin: 0;
+}
     </style>
