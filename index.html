@@ -328,18 +328,15 @@
     /* Đảm bảo khung nội dung không chiếm toàn bộ chiều ngang */
     width: 60%; /* Giảm chiều rộng của khung này */
     max-width: 450px; /* Đặt chiều rộng tối đa */
-    
     /* Căn lề phải (hoặc đẩy sang phải) */
     margin-left: auto; 
     margin-right: 0; /* Đẩy khung thẻ sang bên phải */
-
     /* Giữ nguyên các thuộc tính này */
     display: flex;
     flex-direction: column; 
     gap: 15px; 
     margin-top: 30px;
 }
-
 /* Điều chỉnh vị trí Hình ảnh (Thay ảnh Chibi bằng Icon) */
 .card-image-wrapper.style-2 {
     /* Thiết lập lại kích thước cho Biểu tượng */
@@ -353,18 +350,30 @@
     align-items: center;
     flex-shrink: 0;
 }
-
-/* Điều chỉnh thẻ info-card để căn chỉnh bên trong */
-.info-card.style-2 {
+/* 1. THIẾT LẬP BỐ CỤC 2 CỘT CHÍNH TRONG .container */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Tăng chiều rộng tối đa để hiển thị 2 cột */
+    margin: 0 auto; /* Căn giữa toàn bộ container */
+    display: grid;
+    /* Định nghĩa 2 cột: Cột 1 (Artwork) nhỏ hơn, Cột 2 (Information) lớn hơn */
+    grid-template-columns: 1fr 2fr; /* Ví dụ: 1 phần cho ARTWORK, 2 phần cho INFORMATION */
+    gap: 50px; /* Khoảng cách giữa 2 cột */
+}
+/* 2. CHỈNH SỬA KHỐI INFORMATION (Cột 2) */
+.information-section {
+    /* Đảm bảo khối này chiếm đúng cột của nó */
+    grid-column: 2; 
+}
+/* 3. ĐIỀU CHỈNH KHỐI CHỨA CÁC THẺ (SỞ THÍCH, NHẠC, TÍNH CÁCH) */
+.cards-section {
+    /* Loại bỏ giới hạn chiều rộng và căn lề phải không cần thiết nữa */
+    width: 100%;
+    max-width: none;
+    margin: 30px 0 0 0; /* Chỉ giữ lại margin top */
     display: flex;
-    align-items: center;
-    background-color: white; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    padding: 10px;
-    /* Quan trọng: Thay đổi kích thước thẻ để khớp với nội dung bên phải */
-    width: 100%; 
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+    flex-direction: column; 
+    gap: 15px; 
 }
     </style>
   </section>
