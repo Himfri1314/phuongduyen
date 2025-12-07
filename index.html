@@ -309,29 +309,27 @@
             <img src="fri2.jpg" alt="Nhân vật 2" class="character-img">
           </div>
         </div>
-        <div class="cards-section">
-                <div class="info-card style-2">
-                    <div class="card-image-wrapper style-2 icon-preference">[Icon]</div>
-                    <div class="card-content style-2">
-                        <h3>SỞ THÍCH</h3>
-                        <p>Vẽ vời - "Art is the lie that enables us to realize the truth."</p>
-                    </div>
+       <div class="right-panel">
+            <div class="info-card cryo">
+                <div class="icon-text-group">
+                    <h2 class="card-title">SỞ THÍCH</h2>
                 </div>
-                <div class="info-card style-2">
-                    <div class="card-image-wrapper style-2 icon-music">[Icon]</div>
-                    <div class="card-content style-2">
-                        <h3>NHẠC</h3>
-                        <p>Nắng Ấm Trong Tim - Duongg</p>
-                        <p class="quote">"Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
-                    </div>
+                <p class="card-description">Vẽ vời - “Art is the lie that enables us to realize the truth.”</span></p>
+            </div>
+            <div class="info-card sumeru">
+                <div class="icon-text-group">
+                    <h2 class="card-title">NHẠC</h2>
                 </div>
-                <div class="info-card style-2">
-                    <div class="card-image-wrapper style-2 icon-personality">[Icon]</div>
-                    <div class="card-content style-2">
-                        <h3>TÍNH CÁCH</h3>
-                        <p>Năng động, sáng tạo, lạc quan</p>
-                    </div>
+                <p class="card-description">Nắng Ấm Trong Tim - Duongg<br>
+            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</span></p>
+            </div>
+            <div class="info-card akademiya">
+                <div class="icon-text-group">
+                    <h2 class="card-title">TÍNH CÁCH</h2>
                 </div>
+                <p class="card-description">Năng động, sáng tạo, lạc quan</span></p>
+            </div>
+        </div>
     </div>
     <style>
 .container {
@@ -420,61 +418,131 @@
 .close-button {
     display: none; 
 }
-      /* 1. THIẾT LẬP BỐ CỤC 3 CỘT CHÍNH TRONG .container */
-.container {
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto; 
-    padding: 20px 0; 
-    
-    display: grid;
-    /* Định nghĩa 3 cột: ARTWORK (1 phần), INPUT (1.5 phần), CARDS (1.5 phần) */
-    grid-template-columns: 1fr 1.5fr 1.5fr; 
-    gap: 40px; /* Khoảng cách giữa 3 cột */
-}
-/* 2. CHỈNH SỬA VỊ TRÍ CÁC KHỐI LỚN */
-.artwork-section {
-    grid-column: 1;
-}
-.information-section {
-    grid-column: 2; 
-}
-.cards-column {
-    grid-column: 3; /* Đặt khối thẻ vào cột 3 */
-}
-/* 3. CĂN CHỈNH TIÊU ĐỀ VÀ TIÊU ĐỀ GIẢ (PLACEHOLDER) */
-.info-header {
-    /* Đảm bảo tiêu đề có cùng định dạng (font, size, margin) */
-    margin-bottom: 20px; 
-}
-.info-header h1 {
-    font-size: 28px;
-    color: #444;
-    margin: 0; /* Loại bỏ margin mặc định của H1 */
-}
-.cards-column .info-header.placeholder {
-    /* DÒNG LỆNH QUAN TRỌNG NHẤT */
-    visibility: hidden; /* Ẩn nội dung chữ ('&nbsp;') */
-    height: 44px; /* Đặt chiều cao chính xác bằng tiêu đề H1 + margin */
-    margin-bottom: 20px; 
-}
-/* 4. ĐIỀU CHỈNH CÁC KHỐI CON */
-.input-fields-group {
-    /* Bắt đầu ngay dưới tiêu đề INFORMATION */
-    margin-top: 0; 
-    display: flex;
-    flex-direction: column; 
-    gap: 15px; /* Thêm gap cho các input fields */
-}
-.cards-section {
-    /* Bắt đầu ngay dưới tiêu đề giả */
-    margin-top: 0; 
-    width: 100%;
-    max-width: none;
-    display: flex;
-    flex-direction: column; 
-    gap: 15px; 
-}
+/* ======================================================= */
+    /* 🚀 BỐ CỤC 3 CỘT CHÍNH (ARTWORK | INFORMATION | CARDS) */
+    /* ======================================================= */
+    .content-grid {
+      width: 90%;
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 20px 0;
+      display: grid;
+      /* Định nghĩa 3 cột: ARTWORK (1 phần), INPUT (1.5 phần), CARDS (1.5 phần) */
+      grid-template-columns: 1fr 1.5fr 1.5fr; 
+      gap: 40px; /* Khoảng cách giữa 3 cột */
+    }
+    /* Vị trí Cột 1, 2, 3 */
+    .artwork-section { grid-column: 1; }
+    .information-section { grid-column: 2; }
+    .cards-column { grid-column: 3; }
+    /* --- CĂN CHỈNH NGANG HÀNG (INFORMATION vs CARDS) --- */
+    /* Tiêu đề chính */
+    .info-header h1, .artwork-section h2 {
+      font-size: 28px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    /* TIÊU ĐỀ GIẢ (PLACEHOLDER) */
+    .cards-column .info-header.placeholder {
+      visibility: hidden; /* Ẩn chữ */
+      height: 44px; /* Đặt chiều cao bằng với h1 + margin */
+      margin-bottom: 20px; /* Giữ cùng khoảng cách */
+      padding: 0;
+    }
+    /* --- PHẦN ARTWORK --- */
+    .art-list { display: flex; gap: 20px; }
+    .art-card img {
+      width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .viewmore {
+      margin-top: 10px;
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: none;
+      background: #fff;
+      color: #243B9A;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .viewmore:hover { background: #0077ff; color: #fff; }
+
+    /* --- PHẦN INPUT FIELDS (INFORMATION) --- */
+    .input-fields-group {
+      margin-top: 0; 
+      display: flex;
+      flex-direction: column; 
+      gap: 15px; 
+    }
+    .input-field {
+      padding: 12px 20px;
+      background: #e8effa; /* Màu nền xanh nhạt */
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      color: #222;
+    }
+    .icon-q {
+      color: #6a6a6a; 
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    /* --- PHẦN INFO CARDS (SỞ THÍCH, NHẠC) --- */
+    .cards-section {
+      margin-top: 0; /* Bắt đầu ngay dưới tiêu đề giả */
+      width: 100%;
+      display: flex;
+      flex-direction: column; 
+      gap: 15px; 
+    }
+    .info-card {
+      padding: 15px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      color: #333;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* Style cho thẻ SỞ THÍCH/NHẠC/TÍNH CÁCH (Tái tạo bố cục hình 1) */
+    .info-card {
+      /* Thiết lập nền thẻ theo màu gradient nhẹ */
+      background-image: linear-gradient(to right, #ffffff 60%, #e6f7ff 100%); 
+      position: relative;
+      padding-left: 120px; /* Tạo không gian cho ảnh chibi */
+    }
+
+    /* Vị trí ảnh chibi (Được đặt trong thẻ <img> trong HTML) */
+    .chibi-image {
+      position: absolute;
+      left: -5px; /* Điều chỉnh để ảnh tràn ra ngoài thẻ một chút */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+    .card-title { 
+      margin: 0; 
+      font-size: 18px; 
+      font-weight: 600; 
+      color: #243B9A; /* Màu tiêu đề xanh đậm */
+    }
+    .card-description { 
+      margin-top: 5px; 
+      font-size: 14px; 
+      line-height: 1.4; 
+      color: #555;
+    }
+    /* Style đặc biệt cho thẻ TÍNH CÁCH (không có ảnh chibi) */
+    .info-card.no-chibi {
+      padding-left: 15px; /* Không cần khoảng trống cho ảnh */
+      background: white;
+    }
     </style>
   </section>
 </body>
