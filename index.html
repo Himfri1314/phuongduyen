@@ -51,7 +51,7 @@
 </section>
 <!-- 🎨 CONTENT -->
 <section class="content"
-    <!-- ARTWORK -->
+  <!-- ARTWORK -->
     <div class="artwork">
         <h2>ARTWORK</h2>
         <div class="art-list">
@@ -91,79 +91,142 @@
             </svg>
             SĐT: 0972591449
         </div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="character-card">
+                <button class="close-btn">X</button>
+                <img src="fri1.jpg" alt="Nhân vật 1" class="character-img">
+            </div>
+            <div class="character-card">
+                <button class="close-btn">X</button>
+                <img src="fri2.jpg" alt="Nhân vật 2" class="character-img">
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="info-card cryo">
+                <div class="icon-text-group">
+                    <h2 class="card-title">SỞ THÍCH</h2>
+                </div>
+                <p class="card-description">Vẽ vời - “Art is the lie that enables us to realize the truth.”</span></p>
+            </div>
+            <div class="info-card sumeru">
+                <div class="icon-text-group">
+                    <h2 class="card-title">NHẠC</h2>
+                </div>
+                <p class="card-description">Nắng Ấm Trong Tim - Duongg<br>
+            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</span></p>
+            </div>
+            <div class="info-card akademiya">
+                <div class="icon-text-group">
+                    <h2 class="card-title">TÍNH CÁCH</h2>
+                </div>
+                <p class="card-description">Năng động, sáng tạo, lạc quan</span></p>
+            </div>
+        </div>
     </div>
-    <!-- SỞ THÍCH + NHẠC -->
-   <div>
-       <div class="art-list">
-            <div class="art-card"><img src="fri1.jpg"></div>
-        </div>
-        <div class="card info-card">
-            <h3>Sở thích</h3>
-            <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
-        </div>
-<div class="art-list">
-            <div class="art-card"><img src="fri2.jpg"></div>
-        </div>
-        <div class="card info-card">
-            <h3>Nhạc</h3>
-            <p>Nắng Ấm Trong Tim - Duongg<br>
-            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
-        </div>
-    </div>
-    <style>
- /* SỞ THÍCH + NHẠC */
-.art-list {
+        <style>
+            body {
+    font-family: Arial, sans-serif; /* Chọn font chữ phù hợp */
+    background-color: #f0f0f0; /* Màu nền nhẹ cho toàn bộ trang */
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
-.art-card img {
-    width: 150px;        /* chiều ngang */
-    height: 150px;       /* chiều cao (bằng width → hình vuông) */
-    object-fit: cover;   /* cắt ảnh cho đẹp, không méo */
-    border-radius: 20px; /* bo nhẹ góc */
-}
-.viewmore {
-    margin-top: 10px;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* 1. Thiết lập Flexbox cho phần tử bao ngoài */
-.info-item {
-    display: flex; /* Bật chế độ Flexbox để xếp các mục theo hàng ngang */
-    align-items: flex-start; /* Căn chỉnh các mục theo cạnh trên */
-    margin-bottom: 30px; /* Tạo khoảng cách giữa phần Sở thích và phần Nhạc */
-}
-/* 2. Thiết lập kích thước và lề cho Khung Icon */
-.icon-frame {
-    /* Đảm bảo icon có kích thước cố định và không bị biến dạng */
-    width: 100px; /* Chiều rộng khung icon */
-    height: 100px; /* Chiều cao khung icon */
-    margin-right: 20px; /* Khoảng cách giữa icon và khung chữ */
-    flex-shrink: 0; /* Ngăn icon bị co lại nếu không gian hẹp */
-}
-.icon-frame img {
-    /* Điều chỉnh hình ảnh để vừa với khung (tuỳ thuộc cách bạn làm icon) */
-    width: 100%; 
-    height: 100%;
-    object-fit: contain; /* Giữ tỷ lệ hình ảnh */
-}
-/* 3. Thiết lập kích thước cho Khung Chữ */
-.content-card {
-    flex-grow: 1; /* Cho phép khung chữ mở rộng để chiếm hết không gian còn lại */
-    /* Định dạng chung của card */
-    background-color: white;
-    border-radius: 10px;
+.container {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa hai panel */
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Hoặc màu nền khác nếu cần */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-/* 4. Định dạng chung của thẻ H3 trong card */
-.content-card h3 {
-    margin-top: 0;
+/* --- LEFT PANEL: Nhân vật --- */
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa hai thẻ nhân vật */
 }
- </style>
+.character-card {
+    position: relative;
+    width: 150px; /* Điều chỉnh kích thước */
+    height: 150px; /* Điều chỉnh kích thước */
+    background-color: #3b3a6e; /* Màu nền tối tương tự trong hình */
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.character-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Đảm bảo hình ảnh vừa vặn */
+}
+.close-btn {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 1;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 0;
+}
+/* --- RIGHT PANEL: Thông tin --- */
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa ba thẻ thông tin */
+}
+.info-card {
+    width: 300px; /* Điều chỉnh kích thước */
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+}
+/* Kiểu dáng riêng cho từng thẻ */
+.cryo {
+    border-left: 5px solid #6c7dd2; /* Màu viền cho Cryo */}
+.sumeru {
+    border-left: 5px solid #4a9e88; /* Màu viền cho Sumeru */}
+.akademiya {
+    border-left: 5px solid #2e7d7b; /* Màu viền cho Akademiya */}
+.icon-text-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info-icon {
+    width: 30px; /* Kích thước icon */
+    height: 30px;
+    margin-right: 10px;
+}
+.card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.card-description {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+.bold {
+    font-weight: bold;}
+</style>
 </section>
 <style>
 /* 🌈 NỀN TOÀN TRANG */
@@ -282,6 +345,7 @@ nav a {
 </style>
 </body>
 </html>
+
 
 
 
