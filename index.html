@@ -75,19 +75,42 @@
     </div>
     <!-- SỞ THÍCH + NHẠC -->
    <div>
-        <div class="card info-card">
+       <div class="art-list">
             <div class="art-card"><img src="fri1.jpg"></div>
+        </div>
+        <div class="card info-card">
             <h3>Sở thích</h3>
             <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
         </div>
-
-        <div class="card info-card">
+<div class="art-list">
             <div class="art-card"><img src="fri2.jpg"></div>
+        </div>
+        <div class="card info-card">
             <h3>Nhạc</h3>
             <p>Nắng Ấm Trong Tim - Duongg<br>
             "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
         </div>
     </div>
+    <style>
+        .art-list {
+    display: flex;
+    gap: 20px;
+}
+.art-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.viewmore {
+    margin-top: 10px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+ </style>
 </section>
 <style>
 /* 🌈 NỀN TOÀN TRANG */
@@ -119,19 +142,6 @@ nav a {
     font-size: 18px;
     text-decoration: none;
     color: #333;
-}
-/* AVATAR */
-.avatar-box {
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-}
-.avatar {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #bcdcff;
 }
 /* BANNER */
 .banner {
@@ -219,3 +229,4 @@ nav a {
 </style>
 </body>
 </html>
+
