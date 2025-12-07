@@ -5,25 +5,6 @@
     <title>PhuongDuyen</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <style>
-  .avatar {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #bcdcff;
-      margin-bottom: 10px;
-   }
-   full-center {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .full-center img {
-    width: 250px;
-  }
-</style>
 <body>
 <!-- 🌈 NỀN TOÀN TRANG -->
 <div class="background"></div>
@@ -42,7 +23,7 @@
 <section class="banner">
     <div class="banner-left">
         <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
-        <p>"Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng"</p>
+        <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
         <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="banner-right">
@@ -50,10 +31,10 @@
     </div>
 </section>
 <!-- 🎨 CONTENT -->
-<section class="content">
+<section class="content"
     <!-- ARTWORK -->
     <div class="artwork">
-        <h2>ARTWORK</h2>
+        <h2>Artwork ></h2>
         <div class="art-list">
             <div class="art-card"><img src="art1.jpg"></div>
             <div class="art-card"><img src="art2.jpg"></div>
@@ -62,316 +43,177 @@
     </div>
     <!-- INFORMATION -->
     <div class="recent">
-        <h2>INFORMATION</h2>
+        <h2>Information</h2>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
             </svg>
             Ngày sinh: 04/12/2008
         </div>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
             </svg>
             Cung hoàng đạo: Nhân Mã
         </div>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
             </svg>
             Email: duyen041208@gmail.com
         </div>
         <div class="search-item black">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
             </svg>
             SĐT: 0972591449
         </div>
     </div>
     <!-- SỞ THÍCH + NHẠC -->
-        <style>
-        /* CSS cho toàn bộ cấu trúc */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            padding: 20px;
-        }
-        /* Khung chứa chung (Card) */
-        .card {
-            display: flex; /* Kích hoạt Flexbox */
-            align-items: flex-start; /* Căn chỉnh nội dung theo chiều dọc từ trên xuống */
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        /* Khung 1: Chứa hình ảnh (Avatar) */
-        .avatar-frame {
-            /* Đặt kích thước cố định cho khung avatar và thêm khoảng cách */
-            width: 60px; 
-            margin-right: 15px; /* Tạo khoảng cách giữa avatar và nội dung */
-            flex-shrink: 0; /* Ngăn avatar bị co lại khi nội dung quá dài */
-        }
-        .avatar-frame img {
-            width: 100%; /* Hình ảnh chiếm toàn bộ khung avatar */
-            height: auto;
-            border-radius: 50%; /* Làm hình ảnh tròn (tùy chọn) */
-            display: block;
-        }
-        /* Khung 2: Chứa chữ (Nội dung) */
-        .content-frame {
-            /* Cho phép khung nội dung chiếm hết không gian còn lại */
-            flex-grow: 1; 
-            padding-top: 5px; /* Điều chỉnh để căn chỉnh với hình ảnh */
-        }
-        .content-frame h3 {
-            margin-top: 0;
-            margin-bottom: 5px;
-            color: #333;
-        }
-        .content-frame p {
-            margin-top: 0;
-            color: #666;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <div class="avatar-frame">
-            <img src="fri1.jpg" alt="Avatar Sở Thích">
-        </div>
-        <div class="content-frame">
-            <h3>SỞ THÍCH</h3>
+    <div>
+        <div class="card info-card">
+            <img src="fri1.jpg" class="icon" alt="icon">
+            <h3>Sở thích</h3>
             <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
         </div>
-    </div>
-    <div class="card">
-        <div class="avatar-frame">
-            <img src="fri2.jpg" alt="Avatar Nhạc">
-        </div>
-        <div class="content-frame">
-            <h3>NHẠC</h3>
-            <p>Nắng Ấm Trong Tim - Duongg<br>"Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
+        <div class="card info-card">
+            <img src="fri2.jpg" class="icon" alt="icon">
+            <h3>Nhạc</h3>
+            <p>Nắng Ấm Trong Tim - Duongg<br>
+            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
         </div>
     </div>
-</body>
 </section>
 <style>
-/* --- NỀN MỜ PHÍA SAU --- */
+/* 🌈 NỀN TOÀN TRANG */
 .background {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("pd1.png"); /* ← Thay ảnh nền ở đây */
+    background-image: url("pd1.png");
     background-size: cover;
     background-position: center;
-    opacity: 0.35;
+    opacity: 0.3;
     z-index: -1;
 }
-/* Reset */
+/* BODY */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #222;
+    background: #f6f7fb;
 }
-/* Header */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
-}
-.left-icons .icon-box {
-    background: #e9e9f3;
-    padding: 12px;
-    border-radius: 12px;
-    margin-right: 10px;
-    font-size: 20px;
+    padding: 20px 60px;
 }
 nav a {
     margin: 0 20px;
+    font-size: 18px;
     text-decoration: none;
     color: #333;
-    font-size: 18px;
-    font-weight: 500;
 }
-.right-buttons button {
-    padding: 10px 25px;
+/* AVATAR */
+.avatar-box {
+    background: white;
+    padding: 10px;
     border-radius: 20px;
-    border: none;
-    font-size: 16px;
 }
-.login { background: #ececf3; }
-.signup { background: #6f6bcf; color: white; }
-/* Banner */
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #bcdcff;
+}
+/* BANNER */
 .banner {
+    margin: 40px auto;
     width: 90%;
-    margin: auto;
-    background: #dce5ff;
+    background: white;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-}
-.arrow {
-    font-size: 50px;
-    cursor: pointer;
-    user-select: none;
-    color: #6f6bcf;
-}
-.arrow.left { margin-right: 20px; }
-.arrow.right { margin-left: 20px; }
-.banner-content {
+    padding: 30px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
-.banner-left {
-    width: 45%;
-    padding: 20px;
-}
+.banner-left { width: 45%; }
 .banner-left h1 {
     font-size: 60px;
     margin: 0;
-    font-weight: bold;
 }
 .banner-left p {
-    font-size: 18px;
-    margin: 10px 0 20px;
+    font-size: 20px;
+    margin-top: 15px;
 }
 .readmore {
+    display: inline-block;
+    margin-top: 20px;
     text-decoration: none;
-    color: #222;
+    font-size: 18px;
+    color: #444;
     font-weight: bold;
 }
 .banner-right img {
-    width: 390px;
-    height: auto;
+    width: 350px;
 }
-/* Dots */
-.dots {
-    margin-top: 30px;
-}
-.dot {
-    display: inline-block;
-    width: 20px;
-    height: 8px;
-    background: #c4c4c4;
-    border-radius: 4px;
-    margin-right: 8px;
-}
-.dot.active {
-    background: #6f6bcf;
-}
-/* Grid layout */
-.grid {
+/* CONTENT GRID */
+.content {
     width: 90%;
     margin: 40px auto;
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr;
     gap: 40px;
 }
-/* Artwork */
-.art-row {
+/* ARTWORK */
+.art-list {
     display: flex;
     gap: 20px;
 }
 .art-card img {
-    width: 150px;
-    height: 210px;
+    width: 140px;
+    height: 200px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 }
 .viewmore {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 12px 30px;
-    background: white;
     border-radius: 25px;
     border: none;
-    font-size: 16px;
-    box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
-}
-/* Recent Search */
-.search-box input {
-    width: 100%;
-    padding: 13px 20px;
-    border-radius: 15px;
-    border: none;
-    background: #f1f1f9;
-}
-.search-item {
-    background: #eef2ff;
-    padding: 12px 20px;
-    margin-top: 12px;
-    border-radius: 15px;
-    font-size: 15px;
-}
-.search-item.black { background: #2d2d2d; color: white; }
-.search-item.white { background: white; }
-/* Info Cards */
-.info-card {
     background: white;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.info-card h3 {
-    margin: 10px 0 5px;
-}
-.info-card p {
-    color: #555;
-}
-.info-icon {
-    width: 40px;
-}
-.recent {
-    margin-top: 30px;
-    font-family: Arial, sans-serif;
-}
-.recent h2 {
-    margin-bottom: 18px;
-    font-size: 22px;
-    font-weight: 700;
-}
-/* Khung chung */
+/* INFORMATION BOXES */
 .search-item {
-    padding: 14px 20px;
-    border-radius: 14px;
-    font-size: 15px;
-    margin-bottom: 14px;
-    font-weight: 600;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: #e8effa;
+    border-radius: 15px;
     display: flex;
     align-items: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
-/* Màu 1 – Xanh pastel */
-.search-item.item1 {
-    background: #a8c9ff;
-    color: #fff;
+.icon-search {
+    width: 18px;
+    margin-right: 10px;
 }
-/* Màu 2 – Tím pastel */
-.search-item.item2 {
-    background: #c1b2ff;
-    color: #fff;
+/* INFO CARDS */
+.info-card {
+    width: 260px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
-/* Màu 3 – Xám xanh nhạt */
-.search-item.item3 {
-    background: #e4ecf5;
-    color: #333;
-}
-/* Màu 4 – Xám đậm */
-.search-item.item4 {
-    background: #2e2e2e;
-    color: #fff;
+.icon {
+    width: 60px;
+    height: 60px;
 }
 </style>
 </body>
