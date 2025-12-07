@@ -54,7 +54,7 @@
     .banner-left p { font-size: 20px; color: #555; margin-top: 15px; }
     .readmore { font-size: 18px; font-weight: bold; color: #243B9A; margin-top: 20px; display: inline-block; }
 
-    .banner-right img { width: 350px; }
+    .banner-right img { width: 400px; }
     /* CONTENT GRID */
     .content {
       width: 90%;
@@ -66,7 +66,7 @@
     /* ARTWORK */
     .art-list { display: flex; gap: 20px; }
     .art-card img {
-      width: 140px;
+      width: 100px;
       height: 200px;
       object-fit: cover;
       border-radius: 20px;
@@ -77,11 +77,11 @@
       border-radius: 25px;
       border: none;
       background: #fff;
-      color: #243B9A;
+      color: #7281A0;
       cursor: pointer;
       transition: all 0.3s;
     }
-    .viewmore:hover { background: #0077ff; color: #fff; }
+    .viewmore:hover { background: #7281A0; color: #fff; }
     /* INFORMATION BOXES */
     .search-item {
       padding: 12px 20px;
@@ -289,20 +289,6 @@
     /* Dùng Flexbox để căn chỉnh nội dung và icon */
     justify-content: space-between;
 }
-/* Khu vực Biểu tượng/Icon bên trái */
-.card-image-wrapper.style-2 {
-    /* Thiết lập lại kích thước cho Biểu tượng */
-    width: 60px; 
-    height: 60px;
-    border-radius: 8px; /* Bo tròn ít hơn */
-    margin-right: 15px;
-    overflow: visible; /* Cho phép biểu tượng tràn ra nếu cần */
-    background: none; /* Bỏ màu nền cho icon */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
 /* Phần nội dung bên phải (Màu chữ và tiêu đề) */
 .card-content.style-2 {
     flex-grow: 1;
@@ -346,13 +332,6 @@
             align-items: center;
             padding: 20px 60px;
         }
-        .avatar {
-            width: 80px; /* Giảm kích thước avatar */
-            height: 80px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #bcdcff;
-        }
         nav a { margin: 0 15px; text-decoration: none; color: #222; }
         /* ======================================= */
         /* BANNER                   */
@@ -369,7 +348,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .banner-left h1 { font-size: 40px; color: #243B9A; }
-        .banner-right img { width: 250px; } /* Giảm kích thước ảnh banner */
+        .banner-right img { width: 400px; } /* Giảm kích thước ảnh banner */
         /* ======================================= */
         /* BỐ CỤC 3 CỘT CHÍNH (CONTENT)     */
         /* ======================================= */
@@ -395,13 +374,13 @@
         /* --- TIÊU ĐỀ GIẢ ĐỂ CĂN CHỈNH NGANG HÀNG --- */
         .cards-column .info-header.placeholder {
             visibility: hidden; /* Ẩn chữ nhưng giữ không gian */
-            height: 44px; /* Điều chỉnh chiều cao cho phù hợp với h1 */
+            height: 20px; /* Điều chỉnh chiều cao cho phù hợp với h1 */
             margin-bottom: 20px; 
             padding: 0;
         }
         /* --- CỘT 1: ARTWORK --- */
         .art-list { display: flex; gap: 10px; }
-        .art-card img { width: 100px; height: 150px; object-fit: cover; border-radius: 10px; }
+        .art-card img { width: 100px; height: 200px; object-fit: cover; border-radius: 10px; }
         .viewmore { margin-top: 10px; padding: 8px 20px; border-radius: 20px; border: none; }
         /* --- CỘT 2: INFORMATION (INPUT FIELDS) --- */
         .input-fields-group { 
@@ -412,13 +391,13 @@
         }
         .input-field {
             padding: 12px 20px;
-            background: #e8effa;
+            background: #7281A0;
             border-radius: 15px;
             display: flex;
             align-items: center;
             color: #222;
         }
-        .icon-q { color: #6a6a6a; font-size: 14px; margin-right: 10px; }
+        .icon-q { color: #FFFFF; font-size: 14px; margin-right: 10px; }
         /* --- CỘT 3: INFO CARDS (SỞ THÍCH, NHẠC) --- */
         .cards-section {
             margin-top: 0; 
@@ -434,7 +413,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             color: #333;
             position: relative;
-            padding-left: 120px; /* Khoảng trống cho ảnh chibi */
+            padding-left: 50px; /* Khoảng trống cho ảnh chibi */
         }
         .chibi-image {
             position: absolute;
@@ -456,4 +435,3 @@
   </section>
 </body>
 </html>
-
