@@ -44,7 +44,7 @@
       justify-content: space-between;
       width: 90%;
       margin: 40px auto;
-      background: white;
+      background-image: url("Xanhh.jpg");
       border-radius: 30px;
       padding: 30px;
       color: #333;
@@ -54,7 +54,7 @@
     .banner-left p { font-size: 20px; color: #555; margin-top: 15px; }
     .readmore { font-size: 18px; font-weight: bold; color: #243B9A; margin-top: 20px; display: inline-block; }
 
-    .banner-right img { width: 400px; }
+    .banner-right img { width: 700px; }
     /* CONTENT GRID */
     .content {
       width: 90%;
@@ -86,13 +86,13 @@
     .search-item {
       padding: 12px 20px;
       margin-top: 10px;
-      background: #e8effa;
+      background: #7281A0;
       border-radius: 15px;
       display: flex;
       align-items: center;
       color: #222;
     }
-    .search-item.black { color: #000; }
+    .search-item.black { color: #ffffffff; }
     .icon-search { width: 18px; margin-right: 10px; stroke: #222; }
     /* INFO CARDS */
     .container { display: flex; gap: 20px; padding: 20px; }
@@ -183,29 +183,29 @@
         <h2>INFORMATION</h2>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
             </svg>
             Ngày sinh: 04/12/2008
         </div>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
             </svg>
             Cung hoàng đạo: Nhân Mã
         </div>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
             </svg>
             Email: duyen041208@gmail.com
         </div>
         <div class="search-item black">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
             </svg>
             SĐT: 0972591449
         </div>
@@ -347,8 +347,6 @@
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .banner-left h1 { font-size: 40px; color: #243B9A; }
-        .banner-right img { width: 400px; } /* Giảm kích thước ảnh banner */
         /* ======================================= */
         /* BỐ CỤC 3 CỘT CHÍNH (CONTENT)     */
         /* ======================================= */
@@ -380,7 +378,7 @@
         }
         /* --- CỘT 1: ARTWORK --- */
         .art-list { display: flex; gap: 10px; }
-        .art-card img { width: 100px; height: 200px; object-fit: cover; border-radius: 10px; }
+        .art-card img { width: 250px; height: 450px; object-fit: cover; border-radius: 10px; }
         .viewmore { margin-top: 10px; padding: 8px 20px; border-radius: 20px; border: none; }
         /* --- CỘT 2: INFORMATION (INPUT FIELDS) --- */
         .input-fields-group { 
@@ -395,9 +393,9 @@
             border-radius: 15px;
             display: flex;
             align-items: center;
-            color: #222;
+            color: #FFFF;
         }
-        .icon-q { color: #FFFFF; font-size: 14px; margin-right: 10px; }
+        .icon-q { color: #FFFF; font-size: 14px; margin-right: 10px; }
         /* --- CỘT 3: INFO CARDS (SỞ THÍCH, NHẠC) --- */
         .cards-section {
             margin-top: 0; 
@@ -413,7 +411,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             color: #333;
             position: relative;
-            padding-left: 50px; /* Khoảng trống cho ảnh chibi */
+            padding-left: 10px; /* Khoảng trống cho ảnh chibi */
         }
         .chibi-image {
             position: absolute;
@@ -430,7 +428,6 @@
         }
         .card-title { font-size: 18px; color: #243B9A; margin-bottom: 5px; }
         .card-description { font-size: 14px; color: #555; }
-    </style>
     </style>
   </section>
 </body>
