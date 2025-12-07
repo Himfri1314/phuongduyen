@@ -178,7 +178,7 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 30px;
-            background-color: #ffffff; /* Nền trắng bên trong */
+            background-color: #f0f2f5; /* Nền trắng bên trong */
             border-radius: 15px; /* Góc bo tròn */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
             display: flex;
@@ -199,7 +199,7 @@
         .name-sub {
             font-size: 2.8em;
             font-weight: bold;
-            color: #1a4a9c; /* Màu xanh đậm giống Hình 1 */
+            color: #1a4a9c; /* Màu xanh đậm */
             line-height: 1.1;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -252,7 +252,6 @@
             }
             .name-main, .name-sub {
                 font-size: 2.2em;
-            }
         }
     </style>
   </section>
@@ -310,21 +309,29 @@
             <img src="fri2.jpg" alt="Nhân vật 2" class="character-img">
           </div>
         </div>
-        <div class="right-panel">
-          <div class="info-card cryo">
-            <h2 class="card-title">SỞ THÍCH</h2>
-            <p class="card-description">Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
-          </div>
-          <div class="info-card sumeru">
-            <h2 class="card-title">NHẠC</h2>
-            <p class="card-description">Nắng Ấm Trong Tim - Duongg<br>"Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
-          </div>
-          <div class="info-card akademiya">
-            <h2 class="card-title">TÍNH CÁCH</h2>
-            <p class="card-description">Năng động, sáng tạo, lạc quan</p>
-          </div>
-        </div>
-      </div>
+        <div class="cards-section">
+                <div class="info-card style-2">
+                    <div class="card-image-wrapper style-2 icon-preference">[Icon]</div>
+                    <div class="card-content style-2">
+                        <h3>SỞ THÍCH</h3>
+                        <p>Vẽ vời - "Art is the lie that enables us to realize the truth."</p>
+                    </div>
+                </div>
+                <div class="info-card style-2">
+                    <div class="card-image-wrapper style-2 icon-music">[Icon]</div>
+                    <div class="card-content style-2">
+                        <h3>NHẠC</h3>
+                        <p>Nắng Ấm Trong Tim - Duongg</p>
+                        <p class="quote">"Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
+                    </div>
+                </div>
+                <div class="info-card style-2">
+                    <div class="card-image-wrapper style-2 icon-personality">[Icon]</div>
+                    <div class="card-content style-2">
+                        <h3>TÍNH CÁCH</h3>
+                        <p>Năng động, sáng tạo, lạc quan</p>
+                    </div>
+                </div>
     </div>
     <style>
 .container {
@@ -413,47 +420,55 @@
 .close-button {
     display: none; 
 }
-/* 1. THIẾT LẬP BỐ CỤC 3 CỘT CHÍNH TRONG .container */
+      /* 1. THIẾT LẬP BỐ CỤC 3 CỘT CHÍNH TRONG .container */
 .container {
     width: 90%;
-    max-width: 1400px; /* Tăng chiều rộng tối đa */
+    max-width: 1400px;
     margin: 0 auto; 
     padding: 20px 0; 
+    
     display: grid;
-    /* Định nghĩa 3 cột: ARTWORK (25%), INPUT (35%), CARDS (40%) */
+    /* Định nghĩa 3 cột: ARTWORK (1 phần), INPUT (1.5 phần), CARDS (1.5 phần) */
     grid-template-columns: 1fr 1.5fr 1.5fr; 
-    gap: 40px; 
+    gap: 40px; /* Khoảng cách giữa 3 cột */
 }
-/* 2. KHỐI ARTWORK (Cột 1) */
+/* 2. CHỈNH SỬA VỊ TRÍ CÁC KHỐI LỚN */
 .artwork-section {
     grid-column: 1;
 }
-/* 3. KHỐI INFORMATION/INPUT (Cột 2) */
 .information-section {
     grid-column: 2; 
-    /* Đảm bảo tiêu đề INFORMATION và các input nằm trên một cột */
 }
-/* 4. KHỐI CARDS (Cột 3) - Quan trọng để căn chỉnh ngang hàng */
 .cards-column {
     grid-column: 3; /* Đặt khối thẻ vào cột 3 */
 }
-/* 5. CĂN CHỈNH TIÊU ĐỀ HÀNG ĐẦU */
-/* Giữ chiều cao của tiêu đề SỞ THÍCH/Cards bằng với tiêu đề INFORMATION */
-.cards-column .info-header.placeholder {
-    /* Đảm bảo chiều cao của tiêu đề giả bằng với chiều cao của tiêu đề INFORMATION */
-    visibility: hidden; /* Ẩn nội dung chữ */
-    height: 44px; /* Điều chỉnh giá trị này để căn chỉnh chính xác */
-    margin-bottom: 20px; /* Giữ margin giống với info-header thật */
+/* 3. CĂN CHỈNH TIÊU ĐỀ VÀ TIÊU ĐỀ GIẢ (PLACEHOLDER) */
+.info-header {
+    /* Đảm bảo tiêu đề có cùng định dạng (font, size, margin) */
+    margin-bottom: 20px; 
 }
-/* 6. ĐIỀU CHỈNH CÁC KHỐI CON */
-/* Khối input fields và cards không cần flexbox đặc biệt nữa */
+.info-header h1 {
+    font-size: 28px;
+    color: #444;
+    margin: 0; /* Loại bỏ margin mặc định của H1 */
+}
+.cards-column .info-header.placeholder {
+    /* DÒNG LỆNH QUAN TRỌNG NHẤT */
+    visibility: hidden; /* Ẩn nội dung chữ ('&nbsp;') */
+    height: 44px; /* Đặt chiều cao chính xác bằng tiêu đề H1 + margin */
+    margin-bottom: 20px; 
+}
+/* 4. ĐIỀU CHỈNH CÁC KHỐI CON */
 .input-fields-group {
-    /* Tối ưu hóa margin để nằm dưới tiêu đề */
-    margin-top: 20px; 
+    /* Bắt đầu ngay dưới tiêu đề INFORMATION */
+    margin-top: 0; 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; /* Thêm gap cho các input fields */
 }
 .cards-section {
-    /* Tối ưu hóa margin để nằm dưới tiêu đề giả */
-    margin-top: 20px; 
+    /* Bắt đầu ngay dưới tiêu đề giả */
+    margin-top: 0; 
     width: 100%;
     max-width: none;
     display: flex;
