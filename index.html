@@ -332,93 +332,225 @@
         </div>
     </div>
     <style>
-.container {
-    width: 90%;
-    max-width: 800px;
-}
-/* --- Phần Đầu: INFORMATION  --- */
-.info-header h1 {
-    font-size: 28px;
-    color: #444;
-    margin-bottom: 20px;
-}
-.input-field {
-    /* Đổi màu nền, bỏ đổ bóng để giống ô input  */
-    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng mờ */
-    border-radius: 8px; /* Bo tròn ít hơn */
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    color: #333;
-    font-size: 16px;
-    box-shadow: none; /* Bỏ đổ bóng */
-    display: flex;
-    align-items: center;
-}
-.icon-q {
-    margin-right: 10px;
-    color: #6a6a6a; /* Màu icon tìm kiếm */
-    font-size: 14px;
-}
-/* --- Phần Thẻ Nội Dung --- */
-.cards-section {
-    display: flex;
-    flex-direction: column; 
-    gap: 15px; 
-    margin-top: 30px;
-}
-.info-card.style-2 {
-    display: flex;
-    align-items: center;
-    /* Toàn bộ thẻ có nền trắng và bo tròn */
-    background-color: white; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ hơn */
-    padding: 10px;
-    /* Dùng Flexbox để căn chỉnh nội dung và icon */
-    justify-content: space-between;
-}
-/* Khu vực Biểu tượng/Icon bên trái */
-.card-image-wrapper.style-2 {
-    /* Thiết lập lại kích thước cho Biểu tượng */
-    width: 60px; 
-    height: 60px;
-    border-radius: 8px; /* Bo tròn ít hơn */
-    margin-right: 15px;
-    overflow: visible; /* Cho phép biểu tượng tràn ra nếu cần */
-    background: none; /* Bỏ màu nền cho icon */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-/* Phần nội dung bên phải (Màu chữ và tiêu đề) */
-.card-content.style-2 {
-    flex-grow: 1;
-    padding: 5px 0;
-}
-.card-content.style-2 h3 {
-    margin: 0 0 3px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333; /* Màu tiêu đề đen */
-    border-bottom: none; /* Bỏ gạch chân */
-    padding-bottom: 0;
-}
-.card-content.style-2 p {
-    margin: 3px 0 0 0;
-    font-size: 13px;
-    color: #555;
-}
-.card-content.style-2 .quote {
-    font-style: italic;
-    font-size: 12px;
-    color: #777;
-}
-/* Nút X (Đóng) - Dấu X trên các thẻ chibi ở Hình 1 đã bị loại bỏ trong style này */
-.close-button {
-    display: none; 
-}
+<style>
+        /* Thiết lập cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5; /* Màu nền nhạt */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('placeholder_background.jpg'); /* Giả lập hình nền game */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Container chính cho toàn bộ nội dung */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Nền trắng hơi mờ */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Khu vực Artwork (bên trái) */
+        .artwork-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .artwork-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .artwork-images {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .artwork-item {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .artwork-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .artwork-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        .view-more-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #5b7999; /* Màu xanh đậm */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Khu vực Recent Search (ở giữa) */
+        .recent-search-section {
+            flex: 1.5;
+            min-width: 350px;
+        }
+
+        .search-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #cad7e7; /* Màu xanh nhạt */
+            padding: 12px 20px;
+            margin-bottom: 15px;
+            border-radius: 25px; /* Bo góc tròn hơn */
+            font-size: 1.1em;
+            color: #333;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-item span {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-item .icon-magnifier {
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #5b7999;
+        }
+
+        .search-item .icon-close {
+            background-color: #5b7999; /* Màu xanh đậm */
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Khu vực bên phải (Thông tin nhân vật) */
+        .info-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 250px;
+        }
+
+        .character-info-box {
+            background-color: #f7f9fb; /* Nền nhạt hơn */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid; /* Đường viền bên trái để phân biệt */
+        }
+
+        .cryo-box { border-left-color: #8be4f3; } /* Màu xanh băng */
+        .sumeru-box { border-left-color: #92d471; } /* Màu xanh lá cây */
+        .akademiya-box { border-left-color: #4c6a84; } /* Màu xanh xám */
+
+        .info-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .info-header .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .cryo-icon { color: #8be4f3; }
+        .sumeru-icon { color: #92d471; }
+        .akademiya-icon { color: #4c6a84; }
+
+        .info-header strong {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .info-text {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* Thêm các hình ảnh chibi Layla bên cạnh Recent Search */
+        .chibi-image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: relative; /* Dùng position: absolute để đặt hình lên trên/bên cạnh */
+            margin-top: -20px; /* Di chuyển lên trên một chút */
+            align-items: center;
+        }
+
+        .chibi-image-container .chibi-item {
+            width: 120px; /* Kích thước phù hợp */
+            height: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Đặt vị trí chính xác hơn để giống hình 2 */
+            position: absolute;
+        }
+        
+        .chibi-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Vị trí hình chibi */
+        .chibi-1 {
+            top: 20px;
+            right: -140px; /* Đặt ra ngoài bên phải của search box */
+        }
+
+        .chibi-2 {
+            top: 190px;
+            right: -140px;
+        }
+
+        /* Tạm thời ẩn các hình ảnh chibi để không làm hỏng bố cục chính */
+        /* Trong code thực tế, bạn có thể dùng CSS grid/flexbox phức tạp hơn để căn chỉnh */
     </style>
   </section>
 </body>
 </html>
+
