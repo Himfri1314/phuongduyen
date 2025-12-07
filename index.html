@@ -166,6 +166,95 @@
     <div class="banner-right">
       <img src="lung linh.png" alt="Hình banner">
     </div>
+      <style>
+        /* CSS để tạo kiểu dáng */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5; /* Màu nền nhẹ nhàng */
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff; /* Nền trắng bên trong */
+            border-radius: 15px; /* Góc bo tròn */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-content {
+            flex-grow: 1;
+        }
+        .name-main {
+            font-size: 3em;
+            font-weight: bold;
+            color: #1a4a9c; /* Màu xanh đậm giống Hình 1 */
+            line-height: 1.1;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .name-sub {
+            font-size: 2.8em;
+            font-weight: bold;
+            color: #1a4a9c; /* Màu xanh đậm giống Hình 1 */
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .quote {
+            margin-top: 30px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #555;
+            padding-left: 15px;
+            border-left: 4px solid #1a4a9c; /* Đường viền xanh bên trái */
+        }
+        .back-link {
+            margin-top: 20px;
+            font-size: 1em;
+        }
+        .back-link a {
+            color: #1a4a9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            width: 300px; /* Điều chỉnh kích thước hình ảnh */
+            height: auto;
+            margin-left: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Góc bo tròn cho hình ảnh */
+            /* Để tạo hiệu ứng minh họa như Hình 1 (một hình minh họa, không phải ảnh chụp) */
+            filter: grayscale(10%) brightness(110%) contrast(100%);
+            opacity: 0.95;
+        }
+        /* Điều chỉnh cho màn hình nhỏ */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .image-container {
+                margin: 20px 0 0 0;
+            }
+            .quote {
+                text-align: left;
+                margin-left: 0;
+            }
+            .name-main, .name-sub {
+                font-size: 2.2em;
+            }
+        }
+    </style>
   </section>
   <!-- CONTENT -->
   <section class="content">
@@ -353,3 +442,4 @@
   </section>
 </body>
 </html>
+
