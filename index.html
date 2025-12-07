@@ -5,140 +5,178 @@
   <title>PhuongDuyen</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ===== GLOBAL ===== */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f6f7fb;
-      color: #333;
-    }
+  /* ===== GLOBAL ===== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f6f7fb;
+    color: #243b9a; /* màu chữ mặc định toàn trang */
+  }
 
-    /* 🌈 NỀN TOÀN TRANG */
-    .background {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-image: url("PD.png");
-      background-size: cover;
-      background-position: center;
-      opacity: 0.3;
-      z-index: -1;
-    }
+  /* 🌈 NỀN TOÀN TRANG */
+  .background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("PD.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+  }
 
-    /* HEADER */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-    }
-    nav a {
-      margin: 0 20px;
-      font-size: 18px;
-      text-decoration: none;
-      color: #333;
-    }
-    /* BANNER */
-    .banner {
-      margin: 40px auto;
-      width: 90%;
-      background: white;
-      border-radius: 30px;
-      padding: 30px;
-      display: flex;
-      justify-content: space-between;
-    }
-    .banner-left { width: 45%; }
-    .banner-left h1 { font-size: 60px; margin: 0; }
-    .banner-left p { font-size: 20px; margin-top: 15px; }
-    .readmore {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #444;
-      font-weight: bold;
-    }
-    .banner-right img { width: 350px; }
-    /* CONTENT */
-    .content {
-      width: 90%;
-      margin: 40px auto;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 40px;
-    }
-    /* ARTWORK */
-    .art-list {
-      display: flex;
-      gap: 20px;
-    }
-    .art-card img {
-      width: 140px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-    .viewmore {
-      margin-top: 10px;
-      padding: 12px 30px;
-      border-radius: 25px;
-      border: none;
-      background: white;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    /* INFORMATION BOXES */
-    .search-item {
-      padding: 12px 20px;
-      margin-top: 10px;
-      background: #e8effa;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-    }
-    .icon-search { width: 18px; margin-right: 10px; }
-    /* INFO CARDS */
-    .info-card {
-      width: 260px;
-      padding: 20px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-    .cryo { border-left: 6px solid #6c7dd2; color: #334074; }
-    .sumeru { border-left: 6px solid #4a9e88; color: #2d6a59; }
-    .akademiya { border-left: 6px solid #2e7d7b; color: #1f5654; }
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    color: #222; /* màu chữ menu */
+  }
+  nav a {
+    margin: 0 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #222; /* màu chữ menu */
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #0077ff; /* màu chữ khi hover */
+  }
 
-    /* CHARACTER PANEL */
-    .container { display: flex; gap: 20px; padding: 20px; }
-    .left-panel { display: flex; flex-direction: column; gap: 15px; }
-    .character-card {
-      position: relative;
-      width: 150px;
-      height: 150px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .character-img { width: 100%; height: 100%; object-fit: contain; }
-    .close-btn {
-      position: absolute;
-      top: 8px; left: 8px;
-      background-color: rgba(255,255,255,0.55);
-      border: none; border-radius: 50%;
-      width: 25px; height: 25px;
-      font-size: 14px;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-    }
-    .right-panel { display: flex; flex-direction: column; gap: 15px; }
-    .card-title { margin: 0; font-size: 18px; font-weight: 600; }
-    .card-description { margin-top: 5px; font-size: 14px; line-height: 1.4; opacity: 0.85; }
-  </style>
-</head>
+  /* AVATAR */
+  .avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #bcdcff;
+    margin-bottom: 10px;
+  }
+
+  /* BANNER */
+  .banner {
+    margin: 40px auto;
+    width: 90%;
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #333; /* màu chữ banner */
+  }
+  .banner-left h1 {
+    font-size: 60px;
+    margin: 0;
+    color: #1a1a1a; /* màu chính tên */
+  }
+  .banner-left p {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #555; /* màu phụ mô tả */
+  }
+  .readmore {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #0077ff; /* màu link */
+    font-weight: bold;
+  }
+
+  /* CONTENT */
+  .content {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  /* ARTWORK */
+  .art-list {
+    display: flex;
+    gap: 20px;
+  }
+  .art-card img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .viewmore {
+    margin-top: 10px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: #0077ff; /* màu chữ button */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  .viewmore:hover {
+    background: #0077ff;
+    color: #fff;
+  }
+
+  /* INFORMATION BOXES */
+  .search-item {
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: #e8effa;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    color: #222; /* màu chữ thông tin */
+  }
+  .search-item.black { color: #000; }
+  .icon-search { width: 18px; margin-right: 10px; stroke: #222; }
+
+  /* INFO CARDS */
+  .info-card {
+    width: 260px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    color: #333; /* màu chữ mặc định */
+  }
+  .cryo { border-left: 6px solid #6c7dd2; color: #334074; }
+  .sumeru { border-left: 6px solid #4a9e88; color: #2d6a59; }
+  .akademiya { border-left: 6px solid #2e7d7b; color: #1f5654; }
+
+  .card-title { font-size: 18px; font-weight: 600; color: inherit; }
+  .card-description { margin-top: 5px; font-size: 14px; line-height: 1.4; opacity: 0.85; color: inherit; }
+
+  /* CHARACTER PANEL */
+  .container { display: flex; gap: 20px; padding: 20px; }
+  .left-panel { display: flex; flex-direction: column; gap: 15px; }
+  .character-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .character-img { width: 100%; height: 100%; object-fit: contain; }
+  .close-btn {
+    position: absolute;
+    top: 8px; left: 8px;
+    background-color: rgba(255,255,255,0.55);
+    border: none; border-radius: 50%;
+    width: 25px; height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+  }
+  .right-panel { display: flex; flex-direction: column; gap: 15px; }
+</style>
 <body>
   <div class="background"></div>
   <header>
@@ -173,7 +211,7 @@
   <section class="banner">
     <div class="banner-left">
       <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
-      <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
+      <p>"Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng"</p>
       <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="banner-right">
@@ -190,19 +228,37 @@
       </div>
       <button class="viewmore">View More</button>
     </div>
-    <!-- INFORMATION -->
+        <!-- INFORMATION -->
     <div class="recent">
-      <h2>INFORMATION</h2>
-      <div class="search-item">
-        <svg class="icon-search" viewBox="0 0 24 24" fill="none">
-          <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
-          <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
-        </svg>
-        Ngày sinh: 04/12/2008
-      </div>
-      <div class="search-item">Cung hoàng đạo: Nhân Mã</div>
-      <div class="search-item">Email: duyen041208@gmail.com</div>
-      <div class="search-item black">SĐT: 0972591449</div>
+        <h2>INFORMATION</h2>
+        <div class="search-item">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+            </svg>
+            Ngày sinh: 04/12/2008
+        </div>
+        <div class="search-item">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+            </svg>
+            Cung hoàng đạo: Nhân Mã
+        </div>
+        <div class="search-item">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+            </svg>
+            Email: duyen041208@gmail.com
+        </div>
+        <div class="search-item black">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="black" stroke-width="2"/>
+            </svg>
+            SĐT: 0972591449
+        </div>
       <div class="container">
         <div class="left-panel">
           <div class="character-card">
