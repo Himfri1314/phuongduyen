@@ -192,10 +192,136 @@
       <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="banner-right">
-      <img src="lung linh.png" alt="">
+      <div class="image-section">
     </div>
+    <style>
+    /* Thiết lập cơ bản */
+body {
+    font-family: Arial, sans-serif; /* Thay thế bằng phông chữ phù hợp hơn nếu có */
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Container chứa toàn bộ banner */
+.banner-container {
+    position: relative;
+    width: 900px; /* Chiều rộng tổng thể của banner */
+    height: 300px; /* Chiều cao tổng thể của banner */
+    background-color: #4A5D9A; /* Màu nền xanh đậm chính */
+    background-image: linear-gradient(135deg, #4A5D9A 0%, #30417E 100%); /* Tạo hiệu ứng gradient nhẹ */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* Tạo hiệu ứng bầu trời/vũ trụ mờ ở nền */
+.banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Thêm các chấm hoặc họa tiết mờ */
+    background-image: radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.8;
+}
+/* Nội dung bên trong banner */
+.banner-content {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 2; /* Đảm bảo nội dung nằm trên lớp nền giả lập */
+}
+/* Phần chữ (bên trái) */
+.text-section {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+.character-name {
+    font-size: 70px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.description {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+.read-more {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+    width: fit-content;
+    padding-bottom: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+/* Phần hình ảnh nhân vật (bên phải) */
+.image-section {
+    width: 350px; /* Chiều rộng dành cho nhân vật */
+    position: relative;
+    /* Dùng để hiển thị hình ảnh Layla (Ảnh thực tế sẽ được thêm bằng thẻ <img>) */
+    background-image: url('lung linh.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right; /* Đặt ảnh ở góc dưới bên phải */
+    /* Màu giả lập cho phần background-image */
+}
+/* Nút điều hướng (Mũi tên) */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 10;
+    outline: none;
+    transition: background 0.2s;
+}
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.left-arrow {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.right-arrow {
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dot.active {
+    background-color: white;
+    width: 12px; /* Dấu chấm đang active sẽ lớn hơn một chút */
+    border-radius: 5px;
+}
+      </style>
   </section>
-
   <section class="content">
     <!-- ARTWORK -->
     <div class="artwork">
@@ -263,6 +389,120 @@
             <p class="card-description">Năng động, sáng tạo, lạc quan</p>
           </div>
         </div>
+        <style>
+          /* Thiết lập cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff; /* Màu nền xanh nhạt */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+}
+/* Phần Đầu: INFORMATION và các ô Input */
+.info-header h1 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+}
+.input-field {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+/* --- Phần Thẻ Nội Dung  --- */
+.cards-section {
+    display: flex;
+    flex-direction: column; /* Xếp chồng các thẻ theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa các thẻ */
+    margin-top: 30px;
+}
+.info-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+}
+/* Khu vực hình ảnh/biểu tượng bên trái */
+.card-image-wrapper {
+    position: relative;
+    width: 80px; /* Chiều rộng cho hình ảnh/icon */
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: #a0c4ff; /* Màu nền cho hình chibi (thay thế ảnh Layla/chibi) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Đảm bảo khu vực này không bị co lại */
+}
+/* Nút X (Đóng) */
+.close-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Phần nội dung bên phải */
+.card-content {
+    flex-grow: 1;
+    padding: 10px 0;
+}
+.card-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4A5D9A; /* Màu xanh đậm cho tiêu đề */
+    /* Tạo đường gạch chân mờ */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+}
+.card-content p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #555;
+}
+.card-content .quote {
+    font-style: italic;
+    font-size: 13px;
+    color: #777;
+}
+/* Điều chỉnh thẻ không có hình ảnh */
+.info-card.large-card-content {
+    display: block; /* Quay lại bố cục bình thường */
+}
+.large-card-content .card-content.full-width-content {
+    padding: 0;
+}
+.large-card-content .card-content.full-width-content h3 {
+     /* Màu xanh lá cho phù hợp với thẻ TÍNH CÁCH (giống màu nền Nhạc/Sở Thích trong Hình 1) */
+    color: #4CAF50;
+    border-bottom: 1px solid rgba(76, 175, 80, 0.3);
+}
+        </style>
       </div>
     </div>
   </section>
