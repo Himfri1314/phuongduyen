@@ -324,39 +324,32 @@
 .close-button {
     display: none; 
 }
-/* 1. THIẾT LẬP BỐ CỤC 2 CỘT CHÍNH TRONG .container */
-.container {
-    width: 90%;
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px 0; /* Thêm padding để nội dung không chạm mép */
-    /* DÒNG LỆNH QUAN TRỌNG TẠO BỐ CỤC 2 CỘT */
-    display: grid;
-    /* Định nghĩa 2 cột: Cột 1 (Artwork) nhỏ, Cột 2 (Information) lớn */
-    grid-template-columns: 300px 1fr; /* 300px cố định cho Artwork, 1 phần còn lại cho Information */
-    gap: 50px; /* Khoảng cách giữa 2 cột */
+.information-content-layout {
+    display: flex; /* Kích hoạt Flexbox */
+    gap: 30px; /* Khoảng cách giữa hai cột */
+    align-items: flex-start; /* Giữ cho các khối căn chỉnh từ trên xuống */
+    margin-top: 20px; /* Khoảng cách từ tiêu đề INFORMATION */
 }
-/* 2. CHỈNH SỬA KHỐI ARTWORK (Cột 1) */
-.artwork-section {
-    grid-column: 1; /* Đảm bảo khối này nằm ở cột 1 */
-    /* Bạn có thể thêm các định kiểu cho tiêu đề ARTWORK ở đây */
+/* Định kiểu cho nhóm ô nhập liệu */
+.input-fields-group {
+    flex-basis: 50%; /* Chiếm 50% không gian (có thể điều chỉnh) */
+    display: flex;
+    flex-direction: column; /* Đảm bảo các input vẫn xếp dọc */
 }
-/* 3. CHỈNH SỬA KHỐI INFORMATION (Cột 2) */
-.information-section {
-    grid-column: 2; /* Đảm bảo khối này nằm ở cột 2 */
-}
-/* 4. ĐIỀU CHỈNH CÁC THẺ CON TRONG INFORMATION */
-/* Đảm bảo khối thẻ con chiếm toàn bộ chiều rộng của cột 2 */
+/* Định kiểu cho nhóm thẻ con */
 .cards-section {
-    width: 100%;
-    max-width: none;
-    margin: 30px 0 0 0; 
+    flex-basis: 50%; /* Chiếm 50% không gian còn lại (có thể điều chỉnh) */
+    /* Loại bỏ các thuộc tính margin cũ vì đã được xử lý bởi Flexbox */
+    margin: 0; 
     display: flex;
     flex-direction: column; 
     gap: 15px; 
+}
+/* Đảm bảo các thẻ con không vượt quá chiều rộng của cột Cards */
+.info-card.style-2 {
+    width: 100%;
 }
     </style>
   </section>
 </body>
 </html>
-
