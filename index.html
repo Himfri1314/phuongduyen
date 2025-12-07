@@ -413,33 +413,54 @@
 .close-button {
     display: none; 
 }
-.information-content-layout {
-    display: flex; /* Kích hoạt Flexbox */
-    gap: 30px; /* Khoảng cách giữa hai cột */
-    align-items: flex-start; /* Giữ cho các khối căn chỉnh từ trên xuống */
-    margin-top: 20px; /* Khoảng cách từ tiêu đề INFORMATION */
+/* 1. THIẾT LẬP BỐ CỤC 3 CỘT CHÍNH TRONG .container */
+.container {
+    width: 90%;
+    max-width: 1400px; /* Tăng chiều rộng tối đa */
+    margin: 0 auto; 
+    padding: 20px 0; 
+    display: grid;
+    /* Định nghĩa 3 cột: ARTWORK (25%), INPUT (35%), CARDS (40%) */
+    grid-template-columns: 1fr 1.5fr 1.5fr; 
+    gap: 40px; 
 }
-/* Định kiểu cho nhóm ô nhập liệu */
+/* 2. KHỐI ARTWORK (Cột 1) */
+.artwork-section {
+    grid-column: 1;
+}
+/* 3. KHỐI INFORMATION/INPUT (Cột 2) */
+.information-section {
+    grid-column: 2; 
+    /* Đảm bảo tiêu đề INFORMATION và các input nằm trên một cột */
+}
+/* 4. KHỐI CARDS (Cột 3) - Quan trọng để căn chỉnh ngang hàng */
+.cards-column {
+    grid-column: 3; /* Đặt khối thẻ vào cột 3 */
+}
+/* 5. CĂN CHỈNH TIÊU ĐỀ HÀNG ĐẦU */
+/* Giữ chiều cao của tiêu đề SỞ THÍCH/Cards bằng với tiêu đề INFORMATION */
+.cards-column .info-header.placeholder {
+    /* Đảm bảo chiều cao của tiêu đề giả bằng với chiều cao của tiêu đề INFORMATION */
+    visibility: hidden; /* Ẩn nội dung chữ */
+    height: 44px; /* Điều chỉnh giá trị này để căn chỉnh chính xác */
+    margin-bottom: 20px; /* Giữ margin giống với info-header thật */
+}
+/* 6. ĐIỀU CHỈNH CÁC KHỐI CON */
+/* Khối input fields và cards không cần flexbox đặc biệt nữa */
 .input-fields-group {
-    flex-basis: 50%; /* Chiếm 50% không gian (có thể điều chỉnh) */
-    display: flex;
-    flex-direction: column; /* Đảm bảo các input vẫn xếp dọc */
+    /* Tối ưu hóa margin để nằm dưới tiêu đề */
+    margin-top: 20px; 
 }
-/* Định kiểu cho nhóm thẻ con */
 .cards-section {
-    flex-basis: 50%; /* Chiếm 50% không gian còn lại (có thể điều chỉnh) */
-    /* Loại bỏ các thuộc tính margin cũ vì đã được xử lý bởi Flexbox */
-    margin: 0; 
+    /* Tối ưu hóa margin để nằm dưới tiêu đề giả */
+    margin-top: 20px; 
+    width: 100%;
+    max-width: none;
     display: flex;
     flex-direction: column; 
     gap: 15px; 
-}
-/* Đảm bảo các thẻ con không vượt quá chiều rộng của cột Cards */
-.info-card.style-2 {
-    width: 100%;
 }
     </style>
   </section>
 </body>
 </html>
-
