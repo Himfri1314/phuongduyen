@@ -45,8 +45,8 @@
         <p>"Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng"</p>
         <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
-    <div class="card-wrapper">
-        <img src="lung linh.png" class="big-image">
+    <div class="banner-right">
+        <img src="lung linh.png" alt="">
     </div>
 </section>
 <!-- 🎨 CONTENT -->
@@ -163,167 +163,216 @@
 </body>
 </section>
 <style>
-/* 🌈 NỀN TOÀN TRANG */
+/* --- NỀN MỜ PHÍA SAU --- */
 .background {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("pd1.png");
+    background-image: url("pd1.png"); /* ← Thay ảnh nền ở đây */
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.35;
     z-index: -1;
 }
-/* BODY */
+/* Reset */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f6f7fb;
+    color: #222;
 }
-/* HEADER */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 25px 60px;
+}
+.left-icons .icon-box {
+    background: #e9e9f3;
+    padding: 12px;
+    border-radius: 12px;
+    margin-right: 10px;
+    font-size: 20px;
 }
 nav a {
     margin: 0 20px;
-    font-size: 18px;
     text-decoration: none;
     color: #333;
+    font-size: 18px;
+    font-weight: 500;
 }
-/* AVATAR */
-.avatar-box {
-    background: white;
-    padding: 10px;
+.right-buttons button {
+    padding: 10px 25px;
     border-radius: 20px;
+    border: none;
+    font-size: 16px;
 }
-.avatar {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #bcdcff;
-}
-/* BANNER */
+.login { background: #ececf3; }
+.signup { background: #6f6bcf; color: white; }
+/* Banner */
 .banner {
-    margin: 40px auto;
     width: 90%;
-    background: white;
+    margin: auto;
+    background: #dce5ff;
     border-radius: 30px;
-    padding: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+.arrow {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    color: #6f6bcf;
+}
+.arrow.left { margin-right: 20px; }
+.arrow.right { margin-left: 20px; }
+.banner-content {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
-.banner-left { width: 45%; }
+.banner-left {
+    width: 45%;
+    padding: 20px;
+}
 .banner-left h1 {
     font-size: 60px;
     margin: 0;
+    font-weight: bold;
 }
 .banner-left p {
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 18px;
+    margin: 10px 0 20px;
 }
 .readmore {
-    display: inline-block;
-    margin-top: 20px;
     text-decoration: none;
-    font-size: 18px;
-    color: #444;
+    color: #222;
     font-weight: bold;
 }
 .banner-right img {
-    width: 350px;
+    width: 390px;
+    height: auto;
 }
-/* CONTENT GRID */
-.content {
+/* Dots */
+.dots {
+    margin-top: 30px;
+}
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    background: #c4c4c4;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.dot.active {
+    background: #6f6bcf;
+}
+/* Grid layout */
+.grid {
     width: 90%;
     margin: 40px auto;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1fr;
     gap: 40px;
 }
-/* ARTWORK */
-.art-list {
+/* Artwork */
+.art-row {
     display: flex;
     gap: 20px;
 }
 .art-card img {
-    width: 140px;
-    height: 200px;
+    width: 150px;
+    height: 210px;
     object-fit: cover;
     border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 }
 .viewmore {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 12px 30px;
+    background: white;
     border-radius: 25px;
     border: none;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 16px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
 }
-/* INFORMATION BOXES */
-.search-item {
-    padding: 12px 20px;
-    margin-top: 10px;
-    background: #e8effa;
+/* Recent Search */
+.search-box input {
+    width: 100%;
+    padding: 13px 20px;
     border-radius: 15px;
-    display: flex;
-    align-items: center;
+    border: none;
+    background: #f1f1f9;
 }
-.icon-search {
-    width: 18px;
-    margin-right: 10px;
+.search-item {
+    background: #eef2ff;
+    padding: 12px 20px;
+    margin-top: 12px;
+    border-radius: 15px;
+    font-size: 15px;
 }
-/* INFO CARDS */
+.search-item.black { background: #2d2d2d; color: white; }
+.search-item.white { background: white; }
+/* Info Cards */
 .info-card {
-    width: 260px;
-    padding: 20px;
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 20px;
     margin-bottom: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.12);
 }
-.icon {
-    width: 60px;
-    height: 60px;
+.info-card h3 {
+    margin: 10px 0 5px;
+}
+.info-card p {
+    color: #555;
+}
+.info-icon {
+    width: 40px;
 }
 .recent {
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: Arial, sans-serif;
 }
 .recent h2 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 700;
 }
+/* Khung chung */
 .search-item {
-    padding: 12px 18px;
-    border-radius: 12px;
+    padding: 14px 20px;
+    border-radius: 14px;
     font-size: 15px;
-    margin-bottom: 12px;
-    color: white;
+    margin-bottom: 14px;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
-/* Màu 1 (Xanh nhạt - giống thanh search đầu tiên) */
-.search-item.blue {
-    background: #8ab6f9;
+/* Màu 1 – Xanh pastel */
+.search-item.item1 {
+    background: #a8c9ff;
+    color: #fff;
 }
-/* Màu 2 (Tím nhẹ) */
-.search-item.purple {
-    background: #b8a8ff;
+/* Màu 2 – Tím pastel */
+.search-item.item2 {
+    background: #c1b2ff;
+    color: #fff;
 }
-/* Màu 3 (Xám xanh nhạt) */
-.search-item.light {
-    background: #d9e2ed;
+/* Màu 3 – Xám xanh nhạt */
+.search-item.item3 {
+    background: #e4ecf5;
     color: #333;
 }
-/* Màu 4 (Xám đen) */
-.search-item.black {
-    background: #2f2f2f;
+/* Màu 4 – Xám đậm */
+.search-item.item4 {
+    background: #2e2e2e;
+    color: #fff;
 }
 </style>
 </body>
 </html>
-
