@@ -160,7 +160,7 @@
   <section class="banner">
     <div class="banner-left">
       <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
-      <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
+      <p>"Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng"</p>
       <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
     <div class="banner-right">
@@ -324,53 +324,33 @@
 .close-button {
     display: none; 
 }
-      .cards-section {
-    /* Đảm bảo khung nội dung không chiếm toàn bộ chiều ngang */
-    width: 60%; /* Giảm chiều rộng của khung này */
-    max-width: 450px; /* Đặt chiều rộng tối đa */
-    /* Căn lề phải (hoặc đẩy sang phải) */
-    margin-left: auto; 
-    margin-right: 0; /* Đẩy khung thẻ sang bên phải */
-    /* Giữ nguyên các thuộc tính này */
-    display: flex;
-    flex-direction: column; 
-    gap: 15px; 
-    margin-top: 30px;
-}
-/* Điều chỉnh vị trí Hình ảnh (Thay ảnh Chibi bằng Icon) */
-.card-image-wrapper.style-2 {
-    /* Thiết lập lại kích thước cho Biểu tượng */
-    width: 60px; 
-    height: 60px;
-    border-radius: 8px;
-    margin-right: 15px;
-    /* Đảm bảo icon được căn giữa nếu nó là một hình ảnh nhỏ */
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
 /* 1. THIẾT LẬP BỐ CỤC 2 CỘT CHÍNH TRONG .container */
 .container {
     width: 90%;
-    max-width: 1200px; /* Tăng chiều rộng tối đa để hiển thị 2 cột */
-    margin: 0 auto; /* Căn giữa toàn bộ container */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px 0; /* Thêm padding để nội dung không chạm mép */
+    /* DÒNG LỆNH QUAN TRỌNG TẠO BỐ CỤC 2 CỘT */
     display: grid;
-    /* Định nghĩa 2 cột: Cột 1 (Artwork) nhỏ hơn, Cột 2 (Information) lớn hơn */
-    grid-template-columns: 1fr 2fr; /* Ví dụ: 1 phần cho ARTWORK, 2 phần cho INFORMATION */
+    /* Định nghĩa 2 cột: Cột 1 (Artwork) nhỏ, Cột 2 (Information) lớn */
+    grid-template-columns: 300px 1fr; /* 300px cố định cho Artwork, 1 phần còn lại cho Information */
     gap: 50px; /* Khoảng cách giữa 2 cột */
 }
-/* 2. CHỈNH SỬA KHỐI INFORMATION (Cột 2) */
-.information-section {
-    /* Đảm bảo khối này chiếm đúng cột của nó */
-    grid-column: 2; 
+/* 2. CHỈNH SỬA KHỐI ARTWORK (Cột 1) */
+.artwork-section {
+    grid-column: 1; /* Đảm bảo khối này nằm ở cột 1 */
+    /* Bạn có thể thêm các định kiểu cho tiêu đề ARTWORK ở đây */
 }
-/* 3. ĐIỀU CHỈNH KHỐI CHỨA CÁC THẺ (SỞ THÍCH, NHẠC, TÍNH CÁCH) */
+/* 3. CHỈNH SỬA KHỐI INFORMATION (Cột 2) */
+.information-section {
+    grid-column: 2; /* Đảm bảo khối này nằm ở cột 2 */
+}
+/* 4. ĐIỀU CHỈNH CÁC THẺ CON TRONG INFORMATION */
+/* Đảm bảo khối thẻ con chiếm toàn bộ chiều rộng của cột 2 */
 .cards-section {
-    /* Loại bỏ giới hạn chiều rộng và căn lề phải không cần thiết nữa */
     width: 100%;
     max-width: none;
-    margin: 30px 0 0 0; /* Chỉ giữ lại margin top */
+    margin: 30px 0 0 0; 
     display: flex;
     flex-direction: column; 
     gap: 15px; 
@@ -379,3 +359,4 @@
   </section>
 </body>
 </html>
+
