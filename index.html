@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layla UI</title>
+    <title>PhuongDuyen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -123,6 +123,47 @@ nav a {
     border-radius: 20px;
     font-size: 16px;
     cursor: pointer;
+}
+    .topbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #80bfff;
+}
+.menu {
+    display: flex;
+    gap: 40px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+.buttons {
+    margin-left: auto; /* đẩy nút sang phải */
+    display: flex;
+    gap: 20px;
+}
+.login, .signup {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.login {
+    background: #f2f2f2;
+}
+.signup {
+    background: #6c5ce7;
+    color: white;
 }
 .login { background: #e7e7e7; }
 .signup { background: #6e62d4; color: white; }
