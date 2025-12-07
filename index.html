@@ -45,15 +45,17 @@
         <p>"Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng"</p>
         <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
     </div>
-    <div class="banner-right">
-        <img src="lung linh.png" alt="">
+    <div class="card-wrapper">
+    <div class="big-card">
+        <img src="lung linh.png" class="big-image">
     </div>
+</div>
 </section>
 <!-- 🎨 CONTENT -->
 <section class="content">
     <!-- ARTWORK -->
     <div class="artwork">
-        <h2>Artwork ></h2>
+        <h2>ARTWORK</h2>
         <div class="art-list">
             <div class="art-card"><img src="art1.jpg"></div>
             <div class="art-card"><img src="art2.jpg"></div>
@@ -62,7 +64,7 @@
     </div>
     <!-- INFORMATION -->
     <div class="recent">
-        <h2>Information</h2>
+        <h2>INFORMATION</h2>
         <div class="search-item">
             <svg class="icon-search" viewBox="0 0 24 24" fill="none">
                 <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
@@ -92,52 +94,16 @@
             SĐT: 0972591449
         </div>
     </div>
-    <style>
-        .recent {
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
-}
-.recent h2 {
-    margin-bottom: 15px;
-}
-.search-item {
-    padding: 12px 18px;
-    border-radius: 12px;
-    font-size: 15px;
-    margin-bottom: 12px;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-}
-/* Màu 1 (Xanh nhạt - giống thanh search đầu tiên) */
-.search-item.blue {
-    background: #8ab6f9;
-}
-/* Màu 2 (Tím nhẹ) */
-.search-item.purple {
-    background: #b8a8ff;
-}
-/* Màu 3 (Xám xanh nhạt) */
-.search-item.light {
-    background: #d9e2ed;
-    color: #333;
-}
-/* Màu 4 (Xám đen) */
-.search-item.black {
-    background: #2f2f2f;
-}
-</style>
     <!-- SỞ THÍCH + NHẠC -->
     <div>
         <div class="card info-card">
-            <img src="icon1.png" class="icon" alt="icon">
-            <h3>Sở thích</h3>
+            <img src="fri1.jpg" class="icon" alt="icon">
+            <h3>SỞ THÍCH</h3>
             <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
         </div>
         <div class="card info-card">
-            <img src="icon2.png" class="icon" alt="icon">
-            <h3>Nhạc</h3>
+            <img src="fri2.jpg" class="icon" alt="icon">
+            <h3>NHẠC</h3>
             <p>Nắng Ấm Trong Tim - Duongg<br>
             "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
         </div>
@@ -269,6 +235,59 @@ nav a {
 .icon {
     width: 60px;
     height: 60px;
+}
+.recent {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+.recent h2 {
+    margin-bottom: 15px;
+}
+.search-item {
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+/* Màu 1 (Xanh nhạt - giống thanh search đầu tiên) */
+.search-item.blue {
+    background: #8ab6f9;
+}
+/* Màu 2 (Tím nhẹ) */
+.search-item.purple {
+    background: #b8a8ff;
+}
+/* Màu 3 (Xám xanh nhạt) */
+.search-item.light {
+    background: #d9e2ed;
+    color: #333;
+}
+/* Màu 4 (Xám đen) */
+.search-item.black {
+    background: #2f2f2f;
+}
+.card-wrapper {
+    padding: 40px;
+}
+.big-card {
+    width: 620px;
+    height: 300px;
+    background: #eaeaff;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+}
+.big-image {
+    position: absolute;
+    right: -60px;
+    top: 0;
+    height: 110%;
+    object-fit: cover;
+    transform: scale(1.15);
 }
 </style>
 </body>
