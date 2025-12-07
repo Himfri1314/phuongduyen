@@ -65,25 +65,55 @@
             <div class="search-item">🔍 Email: duyen041208@gmail.com</div>
             <div class="search-item black">🔍 SĐT: 0972591449</div>
         </div>
-      <div class="two-squares">
-    <!-- Khung 1 -->
-    <div class="info-box">
-        <img class="info-img" src="fri1.jpg" alt="Ảnh 1">
-        <div class="info-text">
-            <h3>Sở thích</h3>
-            <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
-        </div>
+      <body>
+<div class="container">
+    <!-- Ô bên trái -->
+    <div class="card">
+        <img src="icon1.png" class="icon" alt="icon">
+        <h3>Sở thích</h3>
+        <p>Vẽ vời - “Art is the lie that enables us to realize the truth.”</p>
     </div>
-    <!-- Khung 2 -->
-    <div class="info-box">
-        <img class="info-img" src="fri2.jpg" alt="Ảnh 2">
-        <div class="info-text">
-            <h3>Nhạc</h3>
-            <p>Nắng Ấm Trong Tim - Duongg</p>
-            <p>"Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
-        </div>
+    <!-- Ô bên phải -->
+    <div class="card">
+        <img src="icon2.png" class="icon" alt="icon">
+        <h3>Nhạc</h3>
+        <p>Nắng Ấm Trong Tim - Duongg<br>
+        "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</p>
     </div>
 </div>
+</body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.container {
+    display: flex;
+    gap: 30px;
+}
+.card {
+    width: 260px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.icon {
+    width: 60px;
+    height: 60px;
+}
+h3 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+p {
+    margin: 0;
+    line-height: 1.4;
+}
+</style>
     </section>
 </body>
 </html>
